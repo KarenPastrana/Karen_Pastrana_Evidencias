@@ -76,11 +76,101 @@
 				<h2>How I made my CAM-thoolpad</h2>
 				<p>To make my CAM toolpad, I used the <b><a href="https://www.vectric.com/?gad_source=1&gclid=Cj0KCQjw-r-vBhC-ARIsAGgUO2BEuv9mOf8aEd9de2k5yA9geuZhZdnRyYJU22VO64ECjL4NDv9OJUsaAoVmEALw_wcB" target="_blank">VCarve</a></b> 
 					program, where as can be seen, the first step is to select the option "create a new file"</p>
-
-				<p>
-					One must set up the material size, both width, height, and thickness, as well as its working unit 
+				<div class="align-center">
+					<img src="../assets/images/Week07/A04.jpeg" alt="" width="500px"/>
+				</div>
+				<p>One must set up the material size, both width, height, and thickness, as well as its working unit 
 					and the origin from which the CNC will be cutting.</p>
-
+				<div class="align-center">
+					<img src="../assets/images/Week07/A05.jpeg" alt="" width="500px"/>
+				</div>
+				<p>For the next part, I imported the files I used: 
+					<ul>
+						<li>Lateral.DXF</li>
+						<li>Middle.DXF</li>
+						<li>Second.DXF</li>
+						<li>Third.DXF</li>
+					</ul></p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A06.jpeg" alt="" width="500px"/>
+				</div>
+				<p>In order to move, scale, or rotate the figure, we must ensure to select all its vectors to prevent any parts
+					 from not moving and causing errors. Additionally, we have the tool to Join open vectors, in order to avoid
+					  any pieces that have not been completely closed.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A07.jpeg" alt="" width="400px"/>
+					<img src="../assets/images/Week07/A08.jpeg" alt="" width="400px"/>
+					<img src="../assets/images/Week07/A09.jpeg" alt="" width="200px"/>
+				</div>
+				<p>In the toolpath section, there is a part where I mainly used the symbols that are circled.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A10.jpeg" alt="" width="500px"/>
+				</div>
+				<p>An important aspect to consider is that all cuts made to fit should have TBones or DogBones to ensure 
+					that the material doesn't require nails or glue. This is because the circular tool doesn't allow for 
+					straight cuts as shown in the DXF. In this case, I specified that they be with a radius of 4 mm, as it 
+					approximated the size of the tool.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A18.jpeg" alt="" width="550px"/>
+					<img src="../assets/images/Week07/A19.jpeg" alt="" width="170px"/>
+				</div>
+				<p>
+					The first toolpath I created was for the recesses in the Lateral.dxf, where the shelves would be
+					 held to prevent any movement. You can also see the tool used: End Mill (0.25 inch), spindle speed: 
+					 16000 rpm, feed rate: 4500 mm/min, plunge rate: 900 mm/min. 
+					 It's important to specify that I used a depth of 12 mm because I didn't want the holes to be visible.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A11.jpeg" alt="" width="900px"/>
+				</div>
+				<p>After that, in the same tab, further down, we can find the calculate button, allowing us to create
+					 the toolpath, and it will open a preview of its simulation.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A12.jpeg" alt="" width="500px"/>
+					<img src="../assets/images/Week07/A13.jpeg" alt="" width="550px"/>
+				</div>
+				<p>For all the other pieces, meaning the exterior cuts, I did use a depth of 15.3 to ensure that if there 
+					was any irregularity in the board or the spoil board, it would cut through the material completely. 
+					It's also necessary to specify the tool and that the cut will be performed on the outside to avoid 
+					making the pieces smaller. Additionally, I added tabs in smooth areas to make their removal easier 
+					and prevent the material from shifting during cutting. Another important point is that I made the cut 
+					in at least 5 passes to avoid damaging the tool.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A14.jpeg" alt="" width="900px"/>
+				</div>
+				<p>And finally, we click on calculate in the same section at the bottom.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A15.jpeg" alt="" width="400px"/>
+				</div>
+				<p>You can see the estimated machining time, which in this case was around 1 hour, 14 minutes, and 30 seconds.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A16.jpeg" alt="" width="900px"/>
+				</div>
+				<p>To conclude, I used the save toolpaths button. It's important to ensure that all are selected so 
+					that only certain ones aren't saved. In my case, for the router I used, the post processor for 
+					G-code was March2/3 Arcs (mm)(*.txt).</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A17.jpeg" alt="" width="900px"/>
+				</div>
+				<br>
+				<h2>How I made something big</h2>
+				<p>
+					The first step was to search for the AR2400 program and open the document Librero.txt, which 
+					already contains the CNC's G-code. We also placed the tool and made sure that we had the necessary 
+					safety measures in place (safety glasses, face mask, boots, lab coat). The material to be cut was also 
+					secured onto the sacrificial bed, ensuring that the tool wouldn't touch the nails and cause damage, as 
+					this could be dangerous. It's important to set the Z 0 at a location where the sacrificial bed is not too 
+					worn out so that it cuts completely, and also ensure that the X and Y are positioned at the corner of the 
+					material.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A20.jpeg" alt="" width="290px"/>
+					<img src="../assets/images/Week07/A21.jpeg" alt="" width="500px"/>
+					<img src="../assets/images/Week07/A22.jpeg" alt="" width="500px"/>
+				</div>
+				<p>Subsequently, the tabs remaining from the material should be sanded, and then the furniture can be assembled 
+					using a hammer. No nails, no glue.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week07/A23.jpeg" alt="" width="900px"/>
+				</div>
 				<br>
 				<h2>Problems and how I fixed them</h2>
 				<p>One of the issues I encountered was when trying to assemble the legs of the bookshelf, as I didn't 
@@ -100,6 +190,8 @@
 
 				<h2>Files</h2>
 				<ul>
+					<li><a href="../assets/files/Week07/Librero.txt" download>Librero.txt</a></li>
+					<li><a href="../assets/files/Week07/Librero.crv" download>Librero.crv</a></li>
 					<li><a href="../assets/files/Week07/Lateral.DXF" download>Lateral.DXF</a></li>
 					<li><a href="../assets/files/Week07/Middle.DXF" download>Middle.DXF</a></li>
 					<li><a href="../assets/files/Week07/Second.DXF" download>Second.DXF</a></li>
