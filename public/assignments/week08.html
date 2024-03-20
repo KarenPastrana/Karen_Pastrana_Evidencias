@@ -49,9 +49,8 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-				<h1>1. Project management</h1>
-				<p>This week I worked on defining my final project idea and started to getting used to the documentation
-					process.</p>
+				<h1>8. Electronics production</h1>
+				
 
 				<h2>Research</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -59,83 +58,160 @@
 					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				
 
-				<h2>Useful links</h2>
-				<ul>
-					<li><a href="../finalproject.html">Example link to page on this website</a></li>
-					<li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3 HTML schools (open in
-							new window)</a></li>
-					<li><a href="https://gitlab.com/pages" target="_blank">GitLab Pages examples</a></li>
-					<li><a href="https://www.fabfoundation.org/" target="_blank">Fab Foundation</a></li>
-					<li><a href="https://fabacademy.org/" target="_blank">Fab Academy</a></li>
-					<li><a href="https://fablabs.io/labs/fablabpuebla" target="_blank">Fab Lab Puebla</a></li>
-				</ul>
-
-				<h2>Code Example</h2>
-				<div
-					style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:945.73px;position:relative">
-					<div style="width:100%;padding-bottom:59.21351760016073%"></div><iframe width="945.73" height="560"
-						title=""
-						src="https://snappify.com/embed/9642e16c-d97a-411a-918a-64fdb92b05f6/8c131b5e-629f-42ea-8a38-4a062d6f38b9?responsive=1&b=1"
-						allow="clipboard-write" allowfullscreen="" loading="lazy"
-						style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe>
+				<h2>Electronics design</h2>
+				<p>The first step to follow is to open the <b><a href="https://www.kicad.org/" target="_blank">KiCad 8.0</a></b> application. To open a new file, we select the 
+					File tab, then New project.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A04.jpeg" alt="" width="90%"/>
+					<img src="../assets/images/Week08/A05.jpeg" alt="" width="40%"/>
+				</div>
+				<p>
+					To be able to visualize the electronic components available at FabLab Puebla, it will be necessary 
+					to enter the following  <b><a href="https://gitlab.fabcloud.org/pub/libraries/electronics/kicad" target="_blank">link</a></b>
+					, where in the "Code" section, you can download it. I did it in .zip format, 
+					which I later decompressed. Additionally, we were recommended not to place that folder in a location 
+					where we usually delete things.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A06.jpeg" alt="" width="90%"/>
+				</div>	
+				<p>To include the elements in the KiCad application, we select Preferences, Manage Symbol Libraries... 
+					This will open a screen where we will select the "+" symbol and enter the name "Fab". Then, we will 
+					select the folder where the fab.kicad_sym file is located from the downloaded folder.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A07.jpeg" alt="" width="55%"/>
+					<img src="../assets/images/Week08/A08.jpeg" alt="" width="40%"/>
+				</div>
+				<p>Subsequently, we select the "Manage Footprint Libraries..." option from the preferences menu. 
+				It will open a window similar to the previous step. Press the "+" symbol, and this time we will name it 
+				"fab" in lowercase because that's how it will find the files. Then, we select the fab.pretty files.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A10.jpeg" alt="" width="55%"/>
+					<img src="../assets/images/Week08/A11.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week08/A12.jpeg" alt="" width="40%"/>
+				</div>
+				<p>Finally, in the settings section, in the preferences tab, we select "Configure Paths..." where we will 
+				input the name "FAB". This time, we will select the entire downloaded folder.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A13.jpeg" alt="" width="55%"/>
+					<img src="../assets/images/Week08/A14.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week08/A15.jpeg" alt="" width="40%"/>
+				</div>
+				<p>In the project files menu, we will open the one ending in _sch to include all the materials we will use.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A15.jpeg" alt="" width="40%"/>
+					
+				</div>
+				<p>We select "Add Symbols" from the button with the opamp icon, and to search for the component we want, 
+				we begin by entering "fab + component name" in the search bar. In this case, I used an attiny44.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A16.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week08/A17.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week08/A18.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week08/A19.jpeg" alt="" width="80%"/>
+				</div>
+				<p>Once all the components to be used are placed and connected as desired, in the Inspect section, we select the 
+				Electrical Rules Checker option to see if there are any errors or if everything is in order. In the window that 
+				appears, we click on Run ERC, and if something comes up, it needs to be corrected. (It's important not to forget 
+				programmer pins and ensure that those placed are of a 2.54 mm size to avoid soldering complications).</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A20.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week08/A21.jpeg" alt="" width="40%"/>
+				</div>
+				<p>We will move to the component placement design section, where we position the components where they will appear on the PCB. We select the green rectangle drawing, and a screen similar to the one shown will open.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A22.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week08/A23.jpeg" alt="" width="80%"/>
+				</div>
+				<p>To place the components, in the Tools tab, we select the option "Update PCB from Schematic...". A tab will appear 
+				showing a list of components, and we will select the "Update Board" option.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A24.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week08/A25.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week08/A26.jpeg" alt="" width="80%"/>
+				</div>
+				<p>The following layers are important when sending the PCB to a manufacturing company.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A27.jpeg" alt="" width="50%"/>
+				</div>
+				<p>To work in a more organized manner, you can cover the following layers.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A28.jpeg" alt="" width="80%"/>
+				</div>
+				<p>To add the rules for the traces to be made, in the File tab, we select Board Setup... 
+				In this section, because the cutting tool has a width of 0.4 mm, we set the minimum separation 
+				to 0.4 mm and the maximum to 0.5 mm in the Design Rules section.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A29.jpeg" alt="" width="20%"/>
+					<img src="../assets/images/Week08/A30.jpeg" alt="" width="75%"/>
+				</div>
+				<p>To start laying down the traces, we can select the following symbol or simply press the X key.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A31.jpeg" alt="" width="30%"/>
+				</div>
+				<p>To select the thickness of the traces we will place, in the top section, we will find a dropdown 
+				menu where we select "Edit Pre-defined Sizes...". By pressing the "+" symbol, we can add a trace 
+				of 0.7 mm, which is recommended to make it easier to work with when soldering.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A32.jpeg" alt="" width="30%"/>
+					<img src="../assets/images/Week08/A33.jpeg" alt="" width="50%"/>
+					<img src="../assets/images/Week08/A34.jpeg" alt="" width="80%"/>
+				</div>
+				<p>In this case, it became impossible to connect MISO and MOSI. Therefore, a valid option would be to 
+				change the connections in the schematic, and then follow these steps: In the schematic, we can place 
+				0-ohm resistors to function as bridges, and then select the "Update Board from Schematic..." option 
+				in the tools tab, followed by selecting "Update Schematic."</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A38.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week08/A35.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week08/A36.jpeg" alt="" width="60%"/>
+					<img src="../assets/images/Week08/A37.jpeg" alt="" width="80%"/>
+				</div>
+				<p>Now, we check for errors in the PCB design in the Inspection section, under the Check Design Rules option. We select Run DRC.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A39.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week08/A40.jpeg" alt="" width="80%"/>
+				</div>
+				<p>It's important to mention that if you want to add text, it should be done using this option and placed on the copper layer so that it gets cut as well.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A42.jpeg" alt="" width="5%"/>
+				</div>
+				<p>Now, we select the Edge.Cuts layer to create a rectangle outlining the size of the PCB, ensuring that 
+				everything is within the shape we created.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A41.jpeg" alt="" width="50%"/>
+					<img src="../assets/images/Week08/A43.jpeg" alt="" width="80%"/>
+				</div>
+				<p>Now, on the Margin layer, we place a rectangle ensuring that there is a 1mm separation between it 
+				and the white rectangle created earlier. Subsequently, the white rectangle is deleted, as it is only for reference.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A44.jpeg" alt="" width="50%"/>
+					<img src="../assets/images/Week08/A45.jpeg" alt="" width="80%"/>
+				</div>
+				<p>Now, to obtain the layer where only the etching of the traces will be done, in the File tab, under 
+				the Export option, we select SVG... We must ensure that in this window, the following options are 
+				selected: F.Cu, Black and white, Board area only. Then, we can proceed to export.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A46.jpeg" alt="" width="50%"/>
+					<img src="../assets/images/Week08/A47.jpeg" alt="" width="80%"/>
+				</div>
+				<p>Finally, we select the User.Drawings layer and use the polygon tool to create a shape within the 
+				purple layer, ensuring a 1mm separation.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A49.jpeg" alt="" width="50%"/>
+					<img src="../assets/images/Week08/A50.jpeg" alt="" width="80%"/>
 				</div>
 
-				<h2>Gallery</h2>
-				<div class="box alt">
-					<div class="row gtr-uniform">
-						<div class="col-12"><span class="image fit"><img src="../assets/images/pic13.jpg"
-									alt="" /></span>
-						</div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic01.jpg"
-									alt="" /></span></div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic02.jpg"
-									alt="" /></span></div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic03.jpg"
-									alt="" /></span></div>
-					</div>
-				</div>
 
-				<h2>Video</h2>
-				<div class="box alt">
-					<div class="video-wrapper">
-						<video width="560" height="315" controls>
-							<source src="../assets/videos/salida.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</div>
-
-				<h2>3D Model</h2>
-				<div class="sketchfab-embed-wrapper">
-					<iframe title="Dita's Gown" frameborder="0" allowfullscreen mozallowfullscreen="true"
-						webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-						xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
-						width="640" height="480"
-						src="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915/embed"> </iframe>
-					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-						<a href="https://sketchfab.com/3d-models/ditas-gown-658c8f8a2f3042c3ad7bdedd83f1c915?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Dita's Gown </a>
-						by
-						<a href="https://sketchfab.com/francisbitontistudio?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Francis Bitonti
-							Studio </a> on
-						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-					</p>
-				</div>
 				<br>
 
 				<h2>Files</h2>
 				<ul>
-					<li><a href="../assets/files/Blink.ino" download>Blink code</a></li>
-					<li><a href="../assets/files/Drawing1.dwg" download>Drawing CAD</a></li>
-					<li><a href="../assets/files/plywood.jpg" download>Plywood cover</a></li>
+					<li><a href="../assets/files/Week08/Attiny84-F_Cu.svg" download>Attiny84-F_Cu.svg</a></li>
+					<li><a href="../assets/files/Week08/Attiny84-User_Drawings.svg" download>Attiny84-User_Drawings.svg</a></li>
+					<li><a href="../assets/files/Week08/Led_ON/Led_ON.ino" download>Led_ON.ino</a></li>
 				</ul>
 			</div>
 		</div>
