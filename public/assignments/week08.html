@@ -53,12 +53,8 @@
 				
 
 				<h2>Research</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
-				
+				<p>Designing a PCB (Printed Circuit Board) using a CNC (Computer Numerical Control) represents an innovative approach that combines the precision of CNC technology with the flexibility of electronic circuit design. This technique enables the fabrication of circuit boards with high-precision traces and components, providing an efficient and customizable alternative to traditional PCB manufacturing methods. The CNC's ability to cut, drill, and engrave materials with great accuracy facilitates the creation of complex and detailed designs, making the PCB design process more streamlined and accessible for engineers and designers.</p>
+				<p>Here you will find the <b><a href="https://fabacademy.org/2024/labs/puebla/week8/" target="_blank">group assignment</a></b> with a little more information.</p>
 				
 
 				<h2>Electronics design</h2>
@@ -198,14 +194,47 @@
 					<img src="../assets/images/Week08/A47.jpeg" alt="" width="80%"/>
 				</div>
 				<p>Finally, we select the User.Drawings layer and use the polygon tool to create a shape within the 
-				purple layer, ensuring a 1mm separation.</p>
+				purple layer, ensuring a 1mm separation. And to export, we follow the same steps as before, but this time we select the User.Drawings layer.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week08/A49.jpeg" alt="" width="50%"/>
 					<img src="../assets/images/Week08/A50.jpeg" alt="" width="80%"/>
 				</div>
-
+				<h2>Physical PCB Design</h2>
+				<p>
+					For this part of the physical PCB design, I encountered several complications, which will be discussed further in the Problems section. To cut the PCB, we will make use of the modsproject.org website, which can be reviewed in more detail on week 4 of my website. Once cut, we can proceed to solder the following components:
+					<ul>
+						<li>2 resistors 0 ohms</li>
+						<li>Attiny 44</li>
+						<li>1 ceramic capacitor 1 microfarad</li>
+						<li>2 LEDs 1206</li>
+						<li>2 resistors 1 kilohm</li>
+						<li>Button</li>
+						<li>kilohm resistor</li>
+						<li>22 pins</li>
+					</ul>
+				</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/B02.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week08/B06.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week08/B07.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week08/B08.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week08/B10.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week08/B11.jpeg" alt="" width="45%"/>
+				</div>
+				<br>
+				<h2>Problems and how I fixed them</h2>
+				<p>One issue I encountered several times was that after finishing cutting, I realized that the traces were not properly made because the tool didn't lower correctly. Later, I discovered it was because the tool was no longer sharp.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A03.jpeg" alt="" width="45%"/>
+				</div>
+				<p>Another important point is that when I made the traces too thin initially, the tool actually lifted the traces, so I had to redesign them to be thicker. I recommend making them 0.8 mm thick to avoid this.</p>
+				<p>Lastly, when attempting to program the PCB, I noticed that the LEDs weren't lighting up properly. One had a very dim light, and the other didn't light up at all. Upon further examination, I realized that when designing, I accidentally connected the button with one of the LEDs, causing the LED's resistance and the button's resistance to add up. This prevented the LED from emitting light. My solution was to use a cutter to sever the trace connecting the pin to the button, ensuring that the resistances did not sum up anymore.</p>
 
 				<br>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A01.jpeg" alt="" width="90%"/>
+					<img src="../assets/images/Week08/A02.jpeg" alt="" width="60%"/>
+				</div>
 
 				<h2>Files</h2>
 				<ul>
