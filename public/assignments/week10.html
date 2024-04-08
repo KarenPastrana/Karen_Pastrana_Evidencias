@@ -50,93 +50,69 @@
 		<div id="main">
 			<div class="inner">
 				<h1>10. Mechanical design & machine design</h1>
-				<p>This week I worked on defining my final project idea and started to getting used to the documentation
-					process.</p>
+				<p>This week was entirely dedicated to team work to create a CNC of our choosing. My team opted for a CNC sewing 
+					machine, in which we could embroider figures or, in any case, letters. Each member contributed individually, 
+					and in my case, it was the design. For this purpose, I first made a sketch of what I wanted to achieve and 
+					thought that 3 mm MDF would be sufficient. However, as we tested the pieces, it required recalculating the 
+					design and remaking many of the parts. We even ended up placing up to 3 laser-cut boards with the same shape 
+					placed together. However, upon seeing the finished design, although it seemed functional, it didn't quite meet 
+					the FabAcademy standard. As we noticed that we couldn't achieve a 90° angle, I decided to incorporate metal 
+					angles into the design using a drill. But in doing so, we realized that the structure wasn't strong enough. 
+					We then cut a piece of MDF in a way that wouldn't collapse the structure inward. Once all this was calculated, 
+					we decided to remake all the pieces again, but this time using a 15 mm MDF in the CNC Router to ensure a stronger 
+					structure. <b><a href="https://fabacademy.org/2024/labs/puebla/week10/" target="_blank">(The final files are available on our team's group page)</a></b> .</p>
 
-				<h2>Research</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
-
-				<h2>Useful links</h2>
-				<ul>
-					<li><a href="../finalproject.html">Example link to page on this website</a></li>
-					<li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3 HTML schools (open in
-							new window)</a></li>
-					<li><a href="https://gitlab.com/pages" target="_blank">GitLab Pages examples</a></li>
-					<li><a href="https://www.fabfoundation.org/" target="_blank">Fab Foundation</a></li>
-					<li><a href="https://fabacademy.org/" target="_blank">Fab Academy</a></li>
-					<li><a href="https://fablabs.io/labs/fablabpuebla" target="_blank">Fab Lab Puebla</a></li>
-				</ul>
-
-				<h2>Code Example</h2>
-				<div
-					style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:945.73px;position:relative">
-					<div style="width:100%;padding-bottom:59.21351760016073%"></div><iframe width="945.73" height="560"
-						title=""
-						src="https://snappify.com/embed/9642e16c-d97a-411a-918a-64fdb92b05f6/8c131b5e-629f-42ea-8a38-4a062d6f38b9?responsive=1&b=1"
-						allow="clipboard-write" allowfullscreen="" loading="lazy"
-						style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe>
+				<h2>What did I do?</h2>
+				<p>The first step we had to check was to see if, upon turning on the sewing machine and placing the fabric on the sewing bed, I could manually move it in different directions to sew and thereby determine if the project was viable or not. As can be seen in the images, we first placed the fabric on the sewing bed, then sewed in different directions, and finally, there is an image demonstrating that it does indeed work.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week10/A02.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/A03.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/A04.jpeg" alt="" width="45%"/>
+				</div>
+				<p>The next step to complete the task assigned to me was to think about how to design the movement mechanism. My idea was that the sewing machine had to be inside the structure, and for that reason, I created the following design.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week10/A0.jpeg" alt="" width="70%"/>
+				</div>
+				<p>When designing the first prototype, I thought that 3 mm MDF would be sufficient, so once we had the pieces seen at the top, they were laser-cut and then assembled.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week10/A05.jpeg" alt="" width="23%"/>
+					<img src="../assets/images/Week10/A06.jpeg" alt="" width="45%"/>
+				</div>
+				<p>Several laser cuts with exactly the same shape were placed to make the structure thicker. As I mentioned earlier, because I didn't consider that the sewing machine had much force, the first design with 3mm MDF ended up warping. I thought this could be solved by placing metal angles on each of the inner corners of the design.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week10/A07.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/B01.jpeg" alt="" width="45%"/>
+				</div>
+				<p>Another problem I encountered was that I thought I was miscalculating my measurements because on one side, the tube with its respective mechanism could fit and roll, but on the other side, it couldn't. However, in the end, I realized that one of the gears was at a different distance, so I had to adjust to avoid that.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week10/A08.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/A09.jpeg" alt="" width="90%"/>
+				</div>
+				<p>Due to its lack of aesthetics and still being prone to bending, it was decided that the design needed to be redone, maintaining the exact same measurements but with increased thickness. Thus, it was cut using a 15 mm MDF on the CNC router. However, one detail we noticed was that the cutting tool used was larger than expected, resulting in some material being removed and the pieces not fitting together perfectly. The solution was to apply adhesive to ensure a snug fit and prevent any wobbling. Another important aspect of this redesign was one of the sides supporting one of the motors, as the belt used to rotate the mechanism wasn't being tensioned enough. Therefore, I had to calculate how much larger that piece of the component should be.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week10/A10.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/A11.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/A13.jpeg" alt="" width="90%"/>
 				</div>
 
-				<h2>Gallery</h2>
-				<div class="box alt">
-					<div class="row gtr-uniform">
-						<div class="col-12"><span class="image fit"><img src="../assets/images/pic13.jpg"
-									alt="" /></span>
-						</div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic01.jpg"
-									alt="" /></span></div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic02.jpg"
-									alt="" /></span></div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic03.jpg"
-									alt="" /></span></div>
-					</div>
-				</div>
-
-				<h2>Video</h2>
 				<div class="box alt">
 					<div class="video-wrapper">
 						<video width="560" height="315" controls>
-							<source src="../assets/videos/salida.mp4" type="video/mp4">
+							<source src="../assets/videos/Week10/A01.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
 				</div>
-
-				<h2>3D Model</h2>
-				<div class="sketchfab-embed-wrapper">
-					<iframe title="Dita's Gown" frameborder="0" allowfullscreen mozallowfullscreen="true"
-						webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-						xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
-						width="640" height="480"
-						src="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915/embed"> </iframe>
-					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-						<a href="https://sketchfab.com/3d-models/ditas-gown-658c8f8a2f3042c3ad7bdedd83f1c915?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Dita's Gown </a>
-						by
-						<a href="https://sketchfab.com/francisbitontistudio?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Francis Bitonti
-							Studio </a> on
-						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-					</p>
+				<p>When we started conducting tests, we noticed that there was a vibration issue with the structure. To address this, we went and purchased some pads and placed them to prevent this vibration, thereby resolving the issue. However, later on, we realized that it was also a matter of programming, as too much power was being applied to the sewing machine's speed, causing excessive vibration. But after making these adjustments, the issue was resolved.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week10/A14.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/A15.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week10/A16.jpeg" alt="" width="70%"/>
+					<img src="../assets/images/Week10/A01.jpeg" alt="" width="90%"/>
 				</div>
 				<br>
-
-				<h2>Files</h2>
-				<ul>
-					<li><a href="../assets/files/Blink.ino" download>Blink code</a></li>
-					<li><a href="../assets/files/Drawing1.dwg" download>Drawing CAD</a></li>
-					<li><a href="../assets/files/plywood.jpg" download>Plywood cover</a></li>
-				</ul>
+				<p>NOTE: 
+					It is important to mention that the download files for the final designs are located on our team's group page.</p>
 			</div>
 		</div>
 
