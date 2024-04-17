@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Brenda Pastrana - Fab Academy</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Fab Academy documentation site for Your Name">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../assets/images/logo.svg" alt="" /></span><span class="title">Brenda Pastrana -
+						FAB ACADEMY</span>
+				</a>
+
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="../index.html">Assignments</a></li>
+				<li><a href="../finalproject.html">Final project</a></li>
+				<li><a href="../about.html">About me</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h1>11. Input devices</h1>
+
+				<h2>Research</h2>
+				<p>In the realm of computing and technology, an "input" refers to any type of information, data, or 
+					signal that enters into a system, program, or electronic device. Inputs are fundamental for 
+					computer systems to interact with the environment and process information appropriately. These 
+					inputs can come from a wide variety of sources, such as keyboards, mice, microphones, sensors, 
+					scanners, among other input devices. The quality and accuracy of inputs directly influence the 
+					effectiveness and performance of computer systems, as they constitute the raw material for executing 
+					operations and making decisions.</p>
+					<div class="align-center">
+						<img src="../assets/images/Week11/A01.jpeg" alt="" width="20%"/>
+					</div>
+				<p>A touch sensor button, also known as a touch-sensitive button or touchpad, is a type of input device
+					 that detects physical touch or pressure to initiate a specific action or command. Unlike traditional
+					  mechanical buttons, which require physical depression, touch sensor buttons respond to gentle taps
+					   or swipes, providing a more intuitive and user-friendly interface. </p>
+				<div class="align-center">
+					<img src="../assets/images/Week11/A02.jpeg" alt="" width="70%"/>
+				</div>
+				<p>In the following image, you can see an exploded view of a simple touch sensor button. The overlay sits 
+					on top. It serves as a separation between the PCB and the user. The thickness of the overlay affects 
+					the touch performance. The sensor pad is the crucial element, which is a solid copper pad. If the 
+					buttons are smaller, touch sensitivity decreases. If the buttons are too large, they become overly 
+					sensitive. The mesh pattern is the ground. The electric field from the sensor pad emerges and 
+					terminates at ground. When the button is touched, an alternative path for field lines is provided. 
+					This, in turn, reflects an increase in capacitance. The touch controller detects this change in 
+					capacitance</p>
+				<div class="align-center">
+					<img src="../assets/images/Week11/A03.jpeg" alt="" width="50%"/>
+				</div>
+				<p>To operate the touch button, the first step would be to connect the button's ground to the ground 
+					of the attiny44, as well as the voltage of both. The pin that will receive the information is 
+					located on the sensor as SIG, which will be connected to one of the ports available for 
+					programming in the microcontroller (port 9 in my case).</p>
+				<p>I used my PCB from <b><a href="https://fabacademy.org/2024/labs/puebla/students/brenda-pastrana/assignments/week08.html" target="_blank">my week 8</a></b> as yo can see in my last picture.</p>
+				<p>Here you will find the <b><a href="https://fabacademy.org/2024/labs/puebla/week11/" target="_blank">group assignment</a></b> with a little more information about the inputs.</p>
+
+				<h2>Programming</h2>
+				<p>The same as the outputs week, I used an Arduino UNO as a programmer and its software.</p>
+				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:675px;position:relative"><div style="width:100%;padding-bottom:100.2962962962963%"></div><iframe width="675" height="677" title="" src="https://snappify.com/embed/6891a7a0-6fb4-4192-bb92-b1c74ed177ae/f790d7c6-48ac-4fc7-ac68-86b1606ff1f4?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+
+				<h2>Video</h2>
+				<div class="box alt">
+					<div class="video-wrapper">
+						<video width="560" height="315" controls>
+							<source src="../assets/videos/Week11/A01.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+
+				<h2>Problems</h2>
+				<p>
+					This week actually felt very similar to the outputs week, although the only difference and issue I encountered is that, because I found it interesting to discover how this sensor worked and I had never used it before, I needed to know how to connect it or if I needed to place a resistor. However, after doing a bit more research and with the documentation from this week, I learned how to obtain its value, but other than that, I didn't have any major issues.</p>
+				<br>
+
+				<h2>Files</h2>
+				<ul>
+					<li><a href="../assets/files/Week11/Inputs/Inputs.ino" download>Inputs.ino</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					
+				</section>
+				<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li><a href="https://twitter.com/BrendaSofiaPM" target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+						</li>
+						<li><a href="https://www.facebook.com/profile.php?id=100073113653006&mibextid=LQQJ4d" target="_blank" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="https://www.instagram.com/brenda_sofia_pm?igsh=MWk1Y2F5NG1kZWR2dw%3D%3D&utm_source=qr" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="https://api.whatsapp.com/send?phone=525574122904&text=" target="_blank" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="mailto:brendasofiapastrana@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://t.snapchat.com/OyBRLwUe" target="_blank" class="icon solid style2 snapchat"><span class="label">Snapchat</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Copyright 2024 Brenda Pastrana </li>
+					<li>Creative Commons Attribution Non Commercial</li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
