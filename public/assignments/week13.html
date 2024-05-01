@@ -58,24 +58,37 @@
 					<img src="../assets/images/Week13/A01.jpeg" alt="" width="20%"/>
 				</div>
 				<h2>Research</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>The I2C communication, which stands for Inter-Integrated Circuit, is a serial communication protocol that enables data transfer between devices using only two wires: one for data transmission (SDA) and another for signal synchronization (SCL). In I2C communication, devices are connected on a shared bus, where each device has a unique 7-bit address. This allows communication between multiple devices on the same network without address conflicts.</p>
+				<p>The basic operation of I2C communication involves a master and one or more slaves. The master initiates and controls data transmissions, while the slaves respond to the master's requests. The master sends a start signal followed by the address of the slave it wishes to communicate with, followed by the data it wants to transmit or request.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week13/A03.jpeg" alt="" width="80%"/>
+				</div>
+				<br>
+				<h2>PCB creation XIAO ESP32C3</h2>
+				<p>This week of communication between microcontrollers, I had to make one more PCB, and since I'll be using the Xiao ESP32C3 for my final project, I took the opportunity to make my PCB.</p>
+				<p>To be able to create my PCB, I created the following files where you can see my new PCB. <b><a href="../assets/files/Week13/xiao esp32-Margin.svg" download>xiao esp32-Margin</a></b> is for the margin and cutting it from the copper board, and the file <b><a href="../assets/files/Week13/xiao esp32-F_Cu.svg" download>xiao esp32-F_Cu</a></b> is for the traces of the tracks.</p>	
+				<div class="align-center">
+					<img src="../assets/images/Week13/A02.jpeg" alt="" width="80%"/>
+				</div>
+				<br>
+				<h2>PCB creation ATTINY85</h2>
+				<p>Due to problems this week with establishing communication and suspecting that it might be related to my PCB with the XIAORP2040, I had to create another PCB and used an ATTINY85 instead.</p>
+				<p>To be able to create my PCB, I created the following files where you can see my new PCB. <b><a href="../assets/files/Week13/Proyectofinalinstrumentacion-Margin.svg" download>attiny85-Margin</a></b> is for the margin and cutting it from the copper board, and the file <b><a href="../assets/files/Week13/Proyectofinalinstrumentacion-F_Cu.svg" download>attiny85-F_Cu</a></b> is for the traces of the tracks.</p>	
+				<div class="align-center">
+					<img src="../assets/images/Week13/A04.jpeg" alt="" width="80%"/>
+				</div>
 
-				
+				<h2>PCB ATTINY44</h2>
+				<p>Finally, the third microcontroller I used was the ATTINY44, which I created during <b><a href="https://fabacademy.org/2024/labs/puebla/students/brenda-pastrana/assignments/week08.html" target="_blank">week 8.</a></b></p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A01.jpeg" alt="" width="80%"/>
+				</div>
 
 				<h2>Video</h2>
 				<div class="box alt">
 					<div class="video-wrapper">
 						<video width="560" height="315" controls>
-							<source src="../assets/videos/salida.mp4" type="video/mp4">
+							<source src="../assets/videos/" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
@@ -86,9 +99,13 @@
 
 				<h2>Files</h2>
 				<ul>
-					<li><a href="../assets/files/Blink.ino" download>Blink code</a></li>
-					<li><a href="../assets/files/Drawing1.dwg" download>Drawing CAD</a></li>
-					<li><a href="../assets/files/plywood.jpg" download>Plywood cover</a></li>
+					<p>PCB XIAO ESP32C3</p>
+					<li><a href="../assets/files/Week13/xiao esp32-F_Cu.svg" download>Xiao esp32-F_Cu</a></li>
+					<li><a href="../assets/files/Week13/xiao esp32-Margin.svg" download>Xiao esp32-Margin</a></li>
+					<br>
+					<p>PCB ATTINY85</p>
+					<li><a href="../assets/files/Week13/Proyectofinalinstrumentacion-F_Cu.svg" download>attiny85-F_Cu</a></li>
+					<li><a href="../assets/files/Week13/Proyectofinalinstrumentacion-F_Cu.svg" download>attiny85-Margin</a></li>
 				</ul>
 			</div>
 		</div>
