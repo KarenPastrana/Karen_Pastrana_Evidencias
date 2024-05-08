@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Brenda Pastrana - Fab Academy</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Fab Academy documentation site for Your Name">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../assets/images/logo.svg" alt="" /></span><span class="title">Brenda Pastrana -
+						FAB ACADEMY</span>
+				</a>
+
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="../index.html">Assignments</a></li>
+				<li><a href="../finalproject.html">Final project</a></li>
+				<li><a href="../about.html">About me</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h1>14. Interface and application programming</h1>
+				<p>For this week, I used the <b><a href="https://build-system.fman.io/qt-designer-download" target="_blank">Qt Designer</a></b> program, which is quite intuitive for creating an interface, and to make it work, I had to program through Visual Studio with Python the part of the signals that would send to the program I created to perform actions depending on the values obtained from the Xiao ESP32C3 that I created in week 13 through Serial communication.</p>
+
+				<h2>Research</h2>
+				<p>Interface and application programming is a fundamental field in computer science that focuses on the design and development of interactive systems between humans and computers. This discipline encompasses the creation of intuitive and appealing user interfaces, as well as the development of robust and functional applications that meet the needs and expectations of users. From graphical interface programming to the implementation of complex algorithms, interface and application programming plays a crucial role in creating modern software and improving user experience.</p>
+				<p>Serial communication is a fundamental method used in computer science and electronics for transmitting data sequentially, bit by bit, over a communication channel. This form of communication involves the continuous sending and receiving of data between devices through a single wire or pair of wires, allowing for reliable data exchange over short or long distances. Whether used in microcontrollers, embedded systems, or computer peripherals, serial communication serves as a cornerstone for connecting various devices and enabling efficient data transfer in numerous applications.</p>
+				<p>Qt Designer is a specialized application for designing graphical user interfaces. It is part of the Qt toolkit, a widely used software library in multiplatform application development. With Qt Designer, developers can create and customize visual interfaces intuitively, without the need to write code. This tool allows for the arrangement of graphical elements and the definition of interactions between them, facilitating the design of attractive and functional interfaces for a variety of applications.</p>
+				<p>Here you will find the <b><a href="https://fabacademy.org/2024/labs/puebla/week14/" target="_blank">group assignment</a></b> with a little more information about the Interface and application programming.</p>
+				
+				<h2>Design interface</h2>
+				<p>The first step to follow is to open the Qt Designer application. Some of the tools I used were buttons, labels, and LCD numbers.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A02.jpeg" alt="" width="40%"/>
+				</div>
+				<p>To change the button designs, right-click on them and choose the "Change Style Sheet..." option.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A03.jpeg" alt="" width="40%"/>
+				</div>
+				<p>A dialog box will appear as the following, where you can input the design of the shapes and colors you want. In this case, I changed the background of the button when it is idle, when it is hovered over by the cursor, and when it is pressed, as well as adjusting the rounding of its corners.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A04.jpeg" alt="" width="60%"/>
+				</div>
+				<p>Once the design is finished, make sure to save it without spaces to make it easier to work with later on.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A01.jpeg" alt="" width="80%"/>
+				</div>
+				<p>If you want to add images to your interface, add a label, and in the blue section, you will find an option labeled "pixmap." Where you see the arrow, select "choose file..."</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A11.jpeg" alt="" width="80%"/>
+				</div>
+
+				<br>
+				<h2>Programming</h2>
+				<p>To start programming now, it's essential to have Python installed on your computer as it will be used for communication through the interface. It's also important to have Visual Studio; remember that the communication part in Visual Studio can be found in the top right corner enclosed in a red circle.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A05.jpeg" alt="" width="80%"/>
+				</div>
+				<p>If you're not sure whether Python is installed on your computer, in the communication section of Visual Studio, type "phyton," and you should see a screen like the following. Once you're sure, you can proceed to install the library with the following instruction: "pip install PyQt6." An important note is that in Visual Studio, you should have the folder open where you saved the format that Qt Designer gave you when saving your interface; it should end in .ui.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A06.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week14/A07.jpeg" alt="" width="80%"/>
+				</div>
+				<p>Now, to convert your interface with the .ui format into something you can program, you should enter the following command in Python communication: "pyuic6 -x .\your_name_interface.ui -o name_you_want.py." Afterward, to verify that it was indeed converted into Python format, enter the command "python .\interfaz.py."</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A08.jpeg" alt="" width="80%"/>
+				</div>
+				<p>Now, after creating all the necessary movements in my interface design, it looks like this in Visual Studio.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A09.jpeg" alt="" width="80%"/>
+					<img src="../assets/images/Week14/A10.jpeg" alt="" width="80%"/>
+				</div>
+				<p>To prevent overwriting when making a modification to your design, create a new Python file like the following. It's importing the Python file created in the previous steps.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A12.jpeg" alt="" width="80%"/>
+				</div>
+				<p>For this interface and to demonstrate that it can communicate with my Xiao ESP32C3, I made it so that through two different buttons, it turns on and off an LED. The interface will serve as a foundation for my final project, in which I'll be able to switch between clock mode and Pomodoro timer mode.</p>
+				<p>Below, the Python code for the interface is located in Visual Studio, and the code seen on Arduino is the one uploaded to the microcontroller to perform its actions.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week14/A13.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week14/A14.jpeg" alt="" width="45%"/>
+				</div>
+				<br>
+				<h2>Video</h2>
+				<div class="box alt">
+					<div class="video-wrapper">
+						<video width="560" height="315" controls>
+							<source src="../assets/videos/Week14/A01.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+
+				
+
+				
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					
+				</section>
+				<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li><a href="https://twitter.com/BrendaSofiaPM" target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+						</li>
+						<li><a href="https://www.facebook.com/profile.php?id=100073113653006&mibextid=LQQJ4d" target="_blank" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="https://www.instagram.com/brenda_sofia_pm?igsh=MWk1Y2F5NG1kZWR2dw%3D%3D&utm_source=qr" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="https://api.whatsapp.com/send?phone=525574122904&text=" target="_blank" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="mailto:brendasofiapastrana@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://t.snapchat.com/OyBRLwUe" target="_blank" class="icon solid style2 snapchat"><span class="label">Snapchat</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Copyright 2024 Brenda Pastrana </li>
+					<li>Creative Commons Attribution Non Commercial</li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
