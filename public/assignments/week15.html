@@ -52,87 +52,79 @@
 				<h1>1. Project management</h1>
 				<p>This week I worked on defining my final project idea and started to getting used to the documentation
 					process.</p>
-				<p>HTML, short for HyperText Markup Language, is the standard language used to create and design web pages. 
-					It was created by Tim Berners-Lee in the early 1990s as a way to share electronic documents in a structured 
-					manner on the World Wide Web. HTML utilizes a set of tags and attributes to define the structure and content 
-					of a web page, allowing for the inclusion of text, images, links, forms, and other multimedia elements.
-				</p>
-				<p>The primary purpose of HTML is to provide a basic structure for the content of a web page, which can 
-					then be styled and enhanced using CSS (Cascading Style Sheets) and imbued with interactivity using 
-					JavaScript. Web pages written in HTML can be viewed in any modern web browser, making this language 
-					fundamental to the creation and functioning of the Internet as we know it today.
-				</p>
-				<p>GitLab is a web-based collaborative software development platform that provides a Git repository management 
-					system, issue tracking tools, continuous integration and continuous delivery (CI/CD), as well as other 
-					features for software development lifecycle management.			
-				</p>
-				<p>Similar to other services like GitHub, GitLab allows developers to store, manage, and collaborate on 
-					software projects using the Git version control system. However, unlike GitHub, GitLab also offers an 
-					open-source version that can be installed on local servers or private cloud, providing greater 
-					control over data and infrastructure.
-				</p>
-				<p>In addition to basic version control and collaboration features, GitLab includes advanced capabilities such 
-					as integration with issue tracking tools, code review, project management, and automation of testing and 
-					deployment through CI/CD. This makes GitLab a comprehensive solution for development teams looking to manage 
-					the entire software development lifecycle in one place.</p>
 
-				<h2>What is version control?</h2>
-				<p>Version control is a system that records changes to a set of files over time. It allows maintaining a history of modifications, facilitating tracking of who made what change, when it was made, and why. Version control is crucial in software development and other collaborative projects as it helps coordinate work among multiple individuals and maintain the integrity and consistency of code or files.</p>
-				<h2>Other popular version control systems</h2>
-				<ol>
-					<li>Subversion (SVN): A centralized version control system following a client-server model.</li>
-					<li>Mercurial (Hg): Similar to Git in many ways but uses a slightly different data model. The system enables rapid scaling and collaborative development, with an intuitive interface.</li>
-					<li>CVS (Concurrent Versions System): One of the earliest widely used version control systems, although it has largely been replaced by more modern systems like Git and SVN.</li>
-				</ol>
-
-				<h2>How I made my website </h2>
-				<p>The first steps to create a web page was to get the link that FabAcademy provided me from GitLab so
-					 I could clone the folder to my computer.
-					 <ol>
-						<li>Open the command prompt</li>
-						<li>Type "cd C:\Usersersrenda\DesktoptopBrenda\FAB ACADEMMY" to be able to open the folder where
-							 I want to copy my repo and press enter to open the folder.</li>
-						<li>Type "git clone https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/puebla/students/brenda-pastrana.git".
-							 The link is obtained from the GitLab in the Code button.</li>
-							 <div class="align-center">
-								<img src="../assets/images/website01.jpeg" alt="" width="200px"/>
-							</div>
-					 </ol>
-					 <p>Some of the commands that can be used to change the web page are:</p>
-					 <ul>
-						<li><b>h1</b> <h1>To put titles of this size</h1></li>
-						<li><b>h2</b> <h2>To set titles of this smaller size</h2></li>
-						<li><b>ul</b> Accompanied by <b>li</b> to put the points in list format</li>
-						<li><b>p</b> To add a new paragraph</li>
-						<li><b>br</b> To give an enter</li>
-						<li><b>img</b> To place an image</li>
-						<li><b>a href</b> To put a link</li>
-					 </ul>
-					 <ol>
-						<h2>How I uploaded my website </h2>
-						<li>To customize the web page with a template provided by Fafael Pérez from the Universidad Iberoamericana Puebla, 
-							I deleted the files that were in the folder called "public" and pasted the necessary files.
-							<a href="https://gitlab.com/mozta.rpa/template-fab" target="_blank" class=""><span class="label"> <b>RepoLink</b></span></a>
-						</li>
-						
-						<li>I type in the synth symbol <b>git add</b> . To update all the modified and included files.</li>
-						<li>I write <b>git commit -m 'Name of the change'</b>. To be able to return more easily to some part of the repo.</li>
-						<li>I type <b>git push</b> to upload the changes to the GitLab.</li>
-						<div class="align-center">
-							<img src="../assets/images/website02.jpeg" alt="" width="900px"/>
-						</div>
-						<br>
-						<h2>Conclusion</h2>
-						<p>At the end of this task, I am now able to create my webpage to document my FabAcademy assignments. One of the key points is that we have a maximum of 10MB per week, meaning that videos, images, and documents uploaded should not exceed this size. If I want to have more design on my page, I can further research on it.</p>
-				 </p>
-					 <!--  
+				<h2>Research</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 					culpa qui officia deserunt mollit anim id est laborum.</p>
-					-->
-<!--  
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div>Teachable Machine Image Model</div>
+					<button type="button" onclick="init()">Start</button>
+					<div id="webcam-container"></div>
+					<div id="label-container"></div>
+					<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+					<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+					<script type="text/javascript">
+						// More API functions here:
+						// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+					
+						// the link to your model provided by Teachable Machine export panel
+						const URL = "https://teachablemachine.withgoogle.com/models/Luma71RZ_/";
+					
+						let model, webcam, labelContainer, maxPredictions;
+					
+						// Load the image model and setup the webcam
+						async function init() {
+							const modelURL = URL + "model.json";
+							const metadataURL = URL + "metadata.json";
+					
+							// load the model and metadata
+							// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+							// or files from your local hard drive
+							// Note: the pose library adds "tmImage" object to your window (window.tmImage)
+							model = await tmImage.load(modelURL, metadataURL);
+							maxPredictions = model.getTotalClasses();
+					
+							// Convenience function to setup a webcam
+							const flip = true; // whether to flip the webcam
+							webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+							await webcam.setup(); // request access to the webcam
+							await webcam.play();
+							window.requestAnimationFrame(loop);
+					
+							// append elements to the DOM
+							document.getElementById("webcam-container").appendChild(webcam.canvas);
+							labelContainer = document.getElementById("label-container");
+							for (let i = 0; i < maxPredictions; i++) { // and class labels
+								labelContainer.appendChild(document.createElement("div"));
+							}
+						}
+					
+						async function loop() {
+							webcam.update(); // update the webcam frame
+							await predict();
+							window.requestAnimationFrame(loop);
+						}
+					
+						// run the webcam image through the image model
+						async function predict() {
+							// predict can take in an image, video or canvas html element
+							const prediction = await model.predict(webcam.canvas);
+							for (let i = 0; i < maxPredictions; i++) {
+								const classPrediction =
+									prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+								labelContainer.childNodes[i].innerHTML = classPrediction;
+							}
+						}
+					</script>
+					
+
 				<h2>Useful links</h2>
 				<ul>
 					<li><a href="../finalproject.html">Example link to page on this website</a></li>
@@ -207,13 +199,11 @@
 				</ul>
 			</div>
 		</div>
--->
 
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="inner">
 				<section>
-					<h2>Get in touch</h2>
 					
 				</section>
 				<section>
