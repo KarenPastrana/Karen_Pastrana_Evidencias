@@ -54,8 +54,7 @@
 					interact (with local input &/or output devices) and communicate (with remote wired or wireless 
 					devices).</p>
 				<p>I used the XIAO-RP2040 microcontroller using Python and C++. The FabLab at Ibero Puebla provided us with 
-					some codes so that we could compare on our own and determine the programming language we can use.</p>
-				<p>You can find the group assignment page <b><a href="https://fabacademy.org/2024/labs/puebla/week6/" target="_blank">here</a></b>.</p>
+					some codes so that we could compare on our own and determine the programming language we can use. You can find the group assignment page <b><a href="https://fabacademy.org/2024/labs/puebla/week6/" target="_blank">here</a></b>.</p>
 
 				<h2>Research</h2>
 				<p>The XIAO-RP2040 microcontroller stands as a versatile and powerful option for embedded system development, 
@@ -80,8 +79,14 @@
 				<div class="align-center">
 					<img src="../assets/images/Week06/B02.jpeg" alt="" width="600px"/>
 				</div>
+				<p>For this task, I used the board created in <b><a href="https://fabacademy.org/2024/labs/puebla/students/brenda-pastrana/assignments/week04.html" target="_blank">week 4</a></b> , which we can observe its connections with the following image:</p>
+				<div class="align-center">
+					<img src="../assets/images/Week06/A02.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week04/A27.jpeg" alt="" width="50%"/>
+				</div>
 				<h2>Code XIAO-RP2040</h2>
 				<h3>Programming in Arduino</h3>
+				<p>Arduino is an integrated development environment (IDE) and an open-source hardware platform used for prototyping electronic projects. As programming software, Arduino provides users with a friendly environment to write, compile, and upload code to Arduino microcontroller boards. With a wide range of libraries and a simple syntax based on C/C++, its popularity stems from its accessibility, versatility, and active community of users who share knowledge and projects.</p>
 				<p>For this part of Arduino programming, I selected the following steps: </p>
 				<p>First, you must download the following link 
 				"//github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json" by copying and pasting 
@@ -121,7 +126,9 @@
 				</div>
 
 
-				<h3>Programming in CircuitPython</h3>
+				<h3>Programming in Python</h3>
+				<p>
+					Python is a high-level, interpreted, and general-purpose programming language known for its clear and readable syntax. As programming software, Python provides developers with a flexible and powerful environment for writing code efficiently and in an easy-to-understand manner. With a wide variety of libraries and modules available, Python is suitable for a range of applications, from web and scientific development to task automation and artificial intelligence. Its popularity stems from its simplicity, versatility, and large developer community that consistently contributes to the growth and evolution of the language.</p>
 				<p>To upload programming to our XIAO-PR2040, we will connect it using a USB C cable while holding down the bootloader mode, which corresponds to the button labeled with a B.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B03.jpeg" alt="" width="50%"/>
@@ -135,24 +142,25 @@
 				<div class="align-center">
 					<img src="../assets/images/Week06/B09.jpeg" alt="" width="50%"/>
 				</div>
-				<p>Download and open the <b><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></b> application.</p>
+				<p>Download and open the <b><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></b> application. 
+					Visual Studio is an integrated development environment (IDE) created by Microsoft. It provides developers with a comprehensive set of tools for building various types of software applications, including web applications, mobile apps, desktop programs, cloud services, and games. Visual Studio supports multiple programming languages, including C#, Visual Basic, C++, Python, and more, and it offers features such as code editing, debugging, version control, and project management. It is widely used by developers around the world due to its robust features, extensive ecosystem, and integration with other Microsoft technologies.</p>
 				<p>Once the microcontroller is set up in bootloader mode, we can open a folder named CIRCUITPY in the Visual Studio Code program.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B10.jpeg" alt="" width="45%"/>
 					<img src="../assets/images/Week06/B11.jpeg" alt="" width="45%"/>
 				</div>
 				<br>
-				<p>To program, we select the option that says code.py.</p>
+				<p>To program, we chose the file named code.py. Every time I save the file, it executes automatically.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B12.jpeg" alt="" width="60%"/>
 				</div>
 				<br>
-				<p>It is important to mention that in order to program in this application, it is necessary to download an extension called Python.</p>
+				<p>An important mention is that there is a Python extension that helps us analyze the code, detecting possible syntax errors.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B13.jpeg" alt="" width="60%"/>
 				</div>
 				<br>
-				<p>Similarly, if you want to open a serial monitor, you need to download the SerialMonitor extension.</p>
+				<p>Similarly, if you want to open a serial monitor, you need to download the SerialMonitor extension. Serial communication is a method for transferring data between electronic devices by transmitting information sequentially, bit by bit. It is widely used in various applications, from interactions between microcontrollers and sensors to communication between computers and peripherals, due to its simplicity, efficiency, and low resource.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B14.jpeg" alt="" width="60%"/>
 				</div>
@@ -162,24 +170,24 @@
 					<img src="../assets/images/Week06/B15.jpeg" alt="" width="60%"/>
 				</div>
 				<br>
-				<p>Be careful to select the port of the computer where the microcontroller is connected.</p>
+				<p>Be careful to select the port of the computer and baud rate. where the microcontroller is connected.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B16.jpeg" alt="" width="60%"/>
 				</div>
 				<br>
 				<p>Here is an example of how an infinite "Hello world" printout should look in the serial monitor.</p>
-				<p>Press Ctrl+S to upload the program and start execution.</p>
+				<p>Press <b>Ctrl+S</b> to upload the program and start execution.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B17.jpeg" alt="" width="60%"/>
 				</div>
 				<br>
 				<p>Now, to add libraries in Python, you need to download the following .zip folder from the following link and decompress.</p>
-				<b><a href="https://circuitpython.org/libraries/" target="_blank">https://circuitpython.org/libraries</a></b>
+				<b><a href="https://circuitpython.org/libraries" target="_blank">https://circuitpython.org/libraries</a></b>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B18.jpeg" alt="" width="60%"/>
 				</div>
 				<br>
-				<p>Both in the microcontroller and in the folder that has just been decompressed, you should open their respective "lib" folders.</p>
+				<p>Both in the microcontroller and in the folder that has just been decompressed, you should open their respective "lib" folders. Due to memory limitations on the card, only pass the libraries that you will use in your program.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week06/B19.jpeg" alt="" width="44%"/>
 					<img src="../assets/images/Week06/B20.jpeg" alt="" width="45%"/>
@@ -198,9 +206,8 @@
 						</video>
 					</div>
 				</div>
-
-
-				
+				<h2>Conclusion</h2>
+				<p>After working with both Arduino and Python programming languages, initially Arduino didn't pose much difficulty for me since it's the one I've typically used. However, as I delved further into Python, I realized it's somewhat simpler. The complexity in Python was having to remember to press the button on the microcontroller for bootloader mode labeled with a B.</p>
 
 				
 
