@@ -68,6 +68,7 @@
 					   or swipes, providing a more intuitive and user-friendly interface. </p>
 				<div class="align-center">
 					<img src="../assets/images/Week11/A02.jpeg" alt="" width="70%"/>
+					<p><b><a href="https://www.makerguides.com/es/interfacing-arduino-to-a-touch-sensor/" target="_blank">(Kumar, 2022)</a></b></p>
 				</div>
 				<p>In the following image, you can see an exploded view of a simple touch sensor button. The overlay sits 
 					on top. It serves as a separation between the PCB and the user. The thickness of the overlay affects 
@@ -76,7 +77,8 @@
 					sensitive. The mesh pattern is the ground. The electric field from the sensor pad emerges and 
 					terminates at ground. When the button is touched, an alternative path for field lines is provided. 
 					This, in turn, reflects an increase in capacitance. The touch controller detects this change in 
-					capacitance</p>
+					capacitance. To obtain more information about the Grove - Touch Sensor, you can view its <b><a href="https://robu.in/wp-content/uploads/2019/09/Grove-Touch-Sensor.pdf" target="_blank">datasheet</a></b>.</p>
+					
 				<div class="align-center">
 					<img src="../assets/images/Week11/A03.jpeg" alt="" width="50%"/>
 				</div>
@@ -84,15 +86,22 @@
 					of the attiny44, as well as the voltage of both. The pin that will receive the information is 
 					located on the sensor as SIG, which will be connected to one of the ports available for 
 					programming in the microcontroller (port 9 in my case).</p>
+				<div class="align-center">
+					<img src="../assets/images/Week11/A04.jpeg" alt="" width="70%"/>
+				</div>	
 				<p>I used my PCB from <b><a href="https://fabacademy.org/2024/labs/puebla/students/brenda-pastrana/assignments/week08.html" target="_blank">my week 8</a></b> as yo can see in my last picture.</p>
 				<p>Here you will find the <b><a href="https://fabacademy.org/2024/labs/puebla/week11/" target="_blank">group assignment</a></b> with a little more information about the inputs.</p>
 
 				<h2>Programming</h2>
 				<p>The same as the outputs week, I used an Arduino UNO as a programmer and its software.</p>
-				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:675px;position:relative"><div style="width:100%;padding-bottom:100.2962962962963%"></div><iframe width="675" height="677" title="" src="https://snappify.com/embed/6891a7a0-6fb4-4192-bb92-b1c74ed177ae/f790d7c6-48ac-4fc7-ac68-86b1606ff1f4?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
-
-				<h2>Video</h2>
+				<div class="align-center">
+					<img src="../assets/images/Week11/A05.jpeg" alt="" width="70%"/>
+				</div>	
+				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:675px;position:relative"><div style="width:100%;padding-bottom:100.2962962962963%"></div><iframe width="675" height="677" title="" src="https://snappify.com/embed/6891a7a0-6fb4-4192-bb92-b1c74ed177ae/f790d7c6-48ac-4fc7-ac68-86b1606ff1f4?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>				
+				<p>Because initially I couldn't get the LED to turn on with the code, I decided to implement serial communication to check if the code was working correctly. After confirming that it was indeed working, I realized that I had used the wrong pin in the programming.</p>
 				<div class="box alt">
+				<br>
+				<h2>Video</h2>
 					<div class="video-wrapper">
 						<video width="560" height="315" controls>
 							<source src="../assets/videos/Week11/A01.mp4" type="video/mp4">
