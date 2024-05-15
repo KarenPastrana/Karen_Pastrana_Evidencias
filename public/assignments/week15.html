@@ -49,21 +49,16 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-				<h1>1. Project management</h1>
-				<p>This week I worked on defining my final project idea and started to getting used to the documentation
-					process.</p>
+				<h1>15. Wildcard Week</h1>
+				<p>
+					For this wildcard week, I decided to train an artificial intelligence to be able to recognize among unicorns, dogs, cats, and everything else to be treated as background nothing.</p>
 
 				<h2>Research</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>In simple terms, machine learning is a branch of artificial intelligence that focuses on developing algorithms and models that enable computers to learn how to perform specific tasks without being explicitly programmed for each one.</p>
+				<p>Instead of following step-by-step instructions, as would be done in traditional programming, in machine learning, algorithms use data to learn patterns and make predictions or decisions. These algorithms are trained using input datasets, which consist of input examples and the expected output, and through iterations, they adjust their internal parameters to improve their performance on the specific task.</p>
+				<p>There are several types of machine learning, including supervised learning, where the algorithm is trained on a set of labeled data, unsupervised learning, where the algorithm finds patterns in unlabeled data, and reinforcement learning, where the algorithm learns through interaction with an environment and the feedback it receives.</p>	
+					
+				<div class="align-center">
 					<div>Teachable Machine Image Model</div>
 					<button type="button" onclick="init()">Start</button>
 					<div id="webcam-container"></div>
@@ -93,7 +88,7 @@
 					
 							// Convenience function to setup a webcam
 							const flip = true; // whether to flip the webcam
-							webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+							webcam = new tmImage.Webcam(450, 450, flip); // width, height, flip
 							await webcam.setup(); // request access to the webcam
 							await webcam.play();
 							window.requestAnimationFrame(loop);
@@ -123,79 +118,68 @@
 							}
 						}
 					</script>
-					
-
-				<h2>Useful links</h2>
-				<ul>
-					<li><a href="../finalproject.html">Example link to page on this website</a></li>
-					<li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3 HTML schools (open in
-							new window)</a></li>
-					<li><a href="https://gitlab.com/pages" target="_blank">GitLab Pages examples</a></li>
-					<li><a href="https://www.fabfoundation.org/" target="_blank">Fab Foundation</a></li>
-					<li><a href="https://fabacademy.org/" target="_blank">Fab Academy</a></li>
-					<li><a href="https://fablabs.io/labs/fablabpuebla" target="_blank">Fab Lab Puebla</a></li>
-				</ul>
-
-				<h2>Code Example</h2>
-				<div
-					style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:945.73px;position:relative">
-					<div style="width:100%;padding-bottom:59.21351760016073%"></div><iframe width="945.73" height="560"
-						title=""
-						src="https://snappify.com/embed/9642e16c-d97a-411a-918a-64fdb92b05f6/8c131b5e-629f-42ea-8a38-4a062d6f38b9?responsive=1&b=1"
-						allow="clipboard-write" allowfullscreen="" loading="lazy"
-						style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe>
-				</div>
-
-				<h2>Gallery</h2>
-				<div class="box alt">
-					<div class="row gtr-uniform">
-						<div class="col-12"><span class="image fit"><img src="../assets/images/pic13.jpg"
-									alt="" /></span>
-						</div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic01.jpg"
-									alt="" /></span></div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic02.jpg"
-									alt="" /></span></div>
-						<div class="col-4"><span class="image fit"><img src="../assets/images/pic03.jpg"
-									alt="" /></span></div>
+				</div>	
+				<br>
+				<h2>Steps to create your machine learning model</h2>
+				<ol>
+					<li>Open the <b><a href="https://teachablemachine.withgoogle.com/train" target="_blank">Teachable Machine </a></b> website. Select what type of learning you want to perform; this website gives you the option between images, sounds, and poses. In this case, I selected images; the website itself provides instructions.</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A01.jpeg" alt="" width="80%"/>
 					</div>
-				</div>
-
-				<h2>Video</h2>
-				<div class="box alt">
-					<div class="video-wrapper">
-						<video width="560" height="315" controls>
-							<source src="../assets/videos/salida.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
+					<li>One of the steps you must take is to name each class what it will identify (it's not like the AI will know what it is, but at the moment of learning, it will understand that what it sees in the images is called that).</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A02.jpeg" alt="" width="80%"/>
 					</div>
+					<li>After taking the videos or uploading the images, it should look like this. The more images the AI has, the better the result will be. Keep in mind that it's a good idea to include a class for "nothing" to represent the background, so the AI understands that you want to identify the object and not the background.</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A03.jpeg" alt="" width="80%"/>
+					</div>
+					<li>Press the "Prepare Model" button so that the website can assist you in processing the images. It's important to mention that you should have rotated the objects in various directions for the AI to better understand. Also, keep in mind that all the data is being processed in the browser, so it might take some time, and you should keep that tab open during this process.</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A04.jpeg" alt="" width="80%"/>
+					</div>
+					<li>Once finished, you can test with objects you haven't taught it to see if it has learned correctly or to verify if the ones you taught it work well.</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A06.jpeg" alt="" width="80%"/>
+					</div>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A07.jpeg" alt="" width="40%"/>
+						<img src="../assets/images/Week15/A08.jpeg" alt="" width="20%"/>
+						<img src="../assets/images/Week15/A10.jpeg" alt="" width="21%"/>
+						<img src="../assets/images/Week15/A11.jpeg" alt="" width="20%"/>
+						<img src="../assets/images/Week15/A12.jpeg" alt="" width="20%"/>
+					</div>
+					<li>To place the representation in my documentation on this page, as you could see at the beginning, select the "Export Model" button.</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A05.jpeg" alt="" width="80%"/>
+					</div>
+					<li>It will give you the following option, in which to include it in the documentation of this website, I selected the JavaScript option.</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A15.jpeg" alt="" width="60%"/>
+					</div>
+					<li>The code provided, I pasted it into my documentation that I do in Visual Studio.</li>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A14.jpeg" alt="" width="60%"/>
+					</div>
+				</ol>
+				<h2>Problems and how I fixed them</h2>
+				<p>As you can see, it doesn't detect what some of the images are, it can get confused, so the solution is to give it more images so it can learn better.</p>
+					<div class="align-center">
+						<img src="../assets/images/Week15/A09.jpeg" alt="" width="20%"/>
+					</div>
+				<p>Data processing again.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week15/A13.jpeg" alt="" width="80%"/>
 				</div>
 
-				<h2>3D Model</h2>
-				<div class="sketchfab-embed-wrapper">
-					<iframe title="Dita's Gown" frameborder="0" allowfullscreen mozallowfullscreen="true"
-						webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-						xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
-						width="640" height="480"
-						src="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915/embed"> </iframe>
-					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-						<a href="https://sketchfab.com/3d-models/ditas-gown-658c8f8a2f3042c3ad7bdedd83f1c915?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Dita's Gown </a>
-						by
-						<a href="https://sketchfab.com/francisbitontistudio?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Francis Bitonti
-							Studio </a> on
-						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=658c8f8a2f3042c3ad7bdedd83f1c915"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-					</p>
-				</div>
+				
+
+				
 				<br>
 
 				<h2>Files</h2>
 				<ul>
-					<li><a href="../assets/files/Blink.ino" download>Blink code</a></li>
-					<li><a href="../assets/files/Drawing1.dwg" download>Drawing CAD</a></li>
-					<li><a href="../assets/files/plywood.jpg" download>Plywood cover</a></li>
+					<li>If you want to download the files to obtain this machine learning, you can do it through the following <b><a href="https://teachablemachine.withgoogle.com/models/Luma71RZ_/" target="_blank">link</a></b>.</li>
 				</ul>
 			</div>
 		</div>
