@@ -54,20 +54,70 @@
 				<p>Here you will find the <b><a href="https://fabacademy.org/2024/labs/puebla/week12/" target="_blank">group assignment</a></b> with a little more information about the Molding and Casting.</p>
 
 				<p><b><a href="https://www.kaupo.de/shop/out/media/SILICONE_3030.pdf" target="_blank">Here you can find the datasheet for silicon 3030.</a></b></p>
-
+				<p>For the first part of this task, the first thing was to know what I wanted to do, so I decided to search for a 3D design on the internet. The design I chose is freely available, and you can find it at the following <b><a href="https://cults3d.com/es/modelo-3d/arte/cat-d2ee12de-8cb2-4a44-b936-ac26e8dfe3b0" target="_blank">link.</a></b>.</p>
 				<div class="align-center">
+					<img src="../assets/images/Week12/B01.jpeg" alt="" width="70%"/>
+				</div>	
+				<br>
+				<p>The next step I took was to 3D print the model to see if it would really look good and to understand in what way it would be convenient for me to make the mold.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/A02.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week12/A03.jpeg" alt="" width="45%"/>
+				</div>	
+				<br>
+				<p>Next, with the help of SolidWorks, I split the model in half and then assembled it into a block exactly the size of the wax where I would make the mold.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/B02.jpeg" alt="" width="20%"/>
+					<img src="../assets/images/Week12/B03.jpeg" alt="" width="18%"/>
+					<img src="../assets/images/Week12/B04.jpeg" alt="" width="60%"/>
+				</div>
+				<br>
+				<p>The next thing I did was open VCarve and create a new file.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/B05.jpeg" alt="" width="20%"/>
+				</div>
+				<br>
+				<p>Subsequently, I placed the measurements of the wax block I will work with in order to have everything at the exact depth</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/B06.jpeg" alt="" width="45%"/>
+				</div>
+				<br>
+				<p>To import the SolidWorks file, it's important that it's in STL format. To import it, you can find the option at the top: Model -> Import Components / 3D Model.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/B07.jpeg" alt="" width="45%"/>
+				</div>
+				<br>
+				<p>Selecting the file we created, it's necessary to position it correctly to avoid errors. That means it should be within the workspace boundaries.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/B08.jpeg" alt="" width="45%"/>
+				</div>
+				<br>
+				<p>For the next step, you should select the option shown in the image for the extraction of less detailed material, as well as the tool.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/B09.jpeg" alt="" width="45%"/>
+				</div>
+				<br>
+				<p>To finish, you should use another more detailed tool for the finishing, which is the ball-end mill. In my case, I used this one.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/B10.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week12/B11.jpeg" alt="" width="45%"/>
 					<img src="../assets/images/Week12/A01.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A02.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A03.jpeg" alt="" width="50%"/>
+				</div>
+				<br>
+				<p>In the following image, you can see the wax block that I used. You can also see the tools that I used.</p>
+				<div class="align-center">
 					<img src="../assets/images/Week12/A04.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A05.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A06.jpeg" alt="" width="50%"/>
+					<img src="../assets/images/Week12/A08.jpeg" alt="" width="30%"/>
+				</div>
+				<br>
+				<p>To set it up on the CNC Asia Robotica shop-1325, we placed the wax block secured with its respective screws. However, in doing so, we realized that we only needed to tighten the nuts because otherwise, the table that served to grip would warp and cause the block to be crooked.</p>
+				<div class="align-center">
 					<img src="../assets/images/Week12/A07.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A08.jpeg" alt="" width="50%"/>
+				</div>
+				<br>
+				<div class="align-center">
 					<img src="../assets/images/Week12/A09.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A10.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A11.jpeg" alt="" width="50%"/>
-					<img src="../assets/images/Week12/A12.jpeg" alt="" width="50%"/>
+					
 					<img src="../assets/images/Week12/A13.jpeg" alt="" width="50%"/>
 					<img src="../assets/images/Week12/A14.jpeg" alt="" width="50%"/>
 					<img src="../assets/images/Week12/A15.jpeg" alt="" width="50%"/>
@@ -86,6 +136,16 @@
 				</div>
 				<h2>Problems</h2>
 				<p>Some of the issues I encountered included the fact that the tool I had used to configure my G code for the router was broken, so I had to use another one. However, this resulted in some parts of my wax not being able to be cut because the tool wouldn't pass through them. Therefore, I had to manually wear down the wax a bit. Another problem arose when the holes in the roughing on the CNC became too deep, causing the material to overflow when poured. My solution was to cover them with some of the remaining wax cuttings and place a plastic barrier to prevent the wax from dripping. Another problem I faced was not knowing what to do next, so I decided to make a mold of silicon 3030 with the remaining wax to create a cat shape. However, it didn't turn out well because some parts remained unmelted. The solution was to melt a larger quantity.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/A05.jpeg" alt="" width="30%"/>
+					<img src="../assets/images/Week12/A06.jpeg" alt="" width="30%"/>
+				</div>
+				<p>Another issue I encountered was that the mold was drilled too much. My solution was to use a soldering iron to heat up the excess wax that came out while making the mold. I placed a piece of plastic over the holes to prevent the wax from dripping further</p>
+				<div class="align-center">
+					<img src="../assets/images/Week12/A10.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week12/A11.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week12/A12.jpeg" alt="" width="20%"/>
+				</div>
 
 				<h2>Files</h2>
 				<ul>
