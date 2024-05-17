@@ -53,9 +53,30 @@
 				<p>For this week, I used the <b><a href="https://build-system.fman.io/qt-designer-download" target="_blank">Qt Designer</a></b> program, which is quite intuitive for creating an interface, and to make it work, I had to program through Visual Studio with Python the part of the signals that would send to the program I created to perform actions depending on the values obtained from the Xiao ESP32C3 that I created in week 13 through Serial communication.</p>
 
 				<h2>Research</h2>
-				<p>Interface and application programming is a fundamental field in computer science that focuses on the design and development of interactive systems between humans and computers. This discipline encompasses the creation of intuitive and appealing user interfaces, as well as the development of robust and functional applications that meet the needs and expectations of users. From graphical interface programming to the implementation of complex algorithms, interface and application programming plays a crucial role in creating modern software and improving user experience.</p>
-				<p>Serial communication is a fundamental method used in computer science and electronics for transmitting data sequentially, bit by bit, over a communication channel. This form of communication involves the continuous sending and receiving of data between devices through a single wire or pair of wires, allowing for reliable data exchange over short or long distances. Whether used in microcontrollers, embedded systems, or computer peripherals, serial communication serves as a cornerstone for connecting various devices and enabling efficient data transfer in numerous applications.</p>
-				<p>Qt Designer is a specialized application for designing graphical user interfaces. It is part of the Qt toolkit, a widely used software library in multiplatform application development. With Qt Designer, developers can create and customize visual interfaces intuitively, without the need to write code. This tool allows for the arrangement of graphical elements and the definition of interactions between them, facilitating the design of attractive and functional interfaces for a variety of applications.</p>
+				<p>Interface and application programming is a fundamental field in computer science that focuses on 
+					the design and development of interactive systems between humans and computers. This discipline 
+					encompasses the creation of intuitive and appealing user interfaces, as well as the development 
+					of robust and functional applications that meet the needs and expectations of users. From graphical 
+					interface programming to the implementation of complex algorithms, interface and application 
+					programming plays a crucial role in creating modern software and improving user experience.</p>
+				<p>Serial communication is a fundamental method used in computer science and electronics for 
+					transmitting data sequentially, bit by bit, over a communication channel. This form of communication 
+					involves the continuous sending and receiving of data between devices through a single wire or 
+					pair of wires, allowing for reliable data exchange over short or long distances. Whether used 
+					in microcontrollers, embedded systems, or computer peripherals, serial communication serves as 
+					a cornerstone for connecting various devices and enabling efficient data transfer in numerous 
+					applications.</p>
+				<p><b><a href="https://build-system.fman.io/qt-designer-download" target="_blank">Qt Designer</a></b>  
+					is a specialized application for designing graphical user interfaces. It is part of 
+					the Qt toolkit, a widely used software library in multiplatform application development. With Qt 
+					Designer, developers can create and customize visual interfaces intuitively, without the need to 
+					write code. This tool allows for the arrangement of graphical elements and the definition of 
+					interactions between them, facilitating the design of attractive and functional interfaces for 
+					a variety of applications. "QT Designer is a program that allows you to develop graphical user 
+					interfaces (GUI). It enables us to compose and customize windows or dialog boxes for use in QGIS, 
+					for example. Qt is available for Unix-like systems (Linux, BSDs, Unix), Apple macOS, and Windows."
+					<b><a href="https://mappinggis.com/2018/12/como-crear-formularios-para-qgis-con-qt-designer/#:~:text=QT%20Designer%20es%20un%20programa,Mac%20OS%20X%20y%20Windows." target="_blank">(Alonso, 2018)</a></b></p>
+				
 				<p>Here you will find the <b><a href="https://fabacademy.org/2024/labs/puebla/week14/" target="_blank">group assignment</a></b> with a little more information about the Interface and application programming.</p>
 				
 				<h2>Design interface</h2>
@@ -63,7 +84,7 @@
 				<div class="align-center">
 					<img src="../assets/images/Week14/A02.jpeg" alt="" width="40%"/>
 				</div>
-				<p>To change the button designs, right-click on them and choose the "Change Style Sheet..." option.</p>
+				<p>To change the button designs, right-click on them and choose the "<b>Change Style Sheet...</b>" option.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week14/A03.jpeg" alt="" width="40%"/>
 				</div>
@@ -75,10 +96,11 @@
 				<div class="align-center">
 					<img src="../assets/images/Week14/A01.jpeg" alt="" width="80%"/>
 				</div>
-				<p>If you want to add images to your interface, add a label, and in the blue section, you will find an option labeled "pixmap." Where you see the arrow, select "choose file..."</p>
+				<p>If you want to add images to your interface, add a label, and in the blue section, you will find an option labeled "<b>pixmap</b>". Where you see the arrow, select "choose file..."</p>
 				<div class="align-center">
 					<img src="../assets/images/Week14/A11.jpeg" alt="" width="80%"/>
 				</div>
+				<p>It's important that you save the files so we can continue with the programming part.</p>
 
 				<br>
 				<h2>Programming</h2>
@@ -86,12 +108,12 @@
 				<div class="align-center">
 					<img src="../assets/images/Week14/A05.jpeg" alt="" width="80%"/>
 				</div>
-				<p>If you're not sure whether Python is installed on your computer, in the communication section of Visual Studio, type "phyton," and you should see a screen like the following. Once you're sure, you can proceed to install the library with the following instruction: "pip install PyQt6." An important note is that in Visual Studio, you should have the folder open where you saved the format that Qt Designer gave you when saving your interface; it should end in .ui.</p>
+				<p>If you're not sure whether Python is installed on your computer, in the communication section of Visual Studio, type "<b>phyton</b>", and you should see a screen like the following. Once you're sure, you can proceed to install the library with the following instruction: "<b>pip install PyQt6</b>". An important note is that in Visual Studio, you should have the folder open where you saved the format that Qt Designer gave you when saving your interface; it should end in <b>.ui</b>.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week14/A06.jpeg" alt="" width="80%"/>
 					<img src="../assets/images/Week14/A07.jpeg" alt="" width="80%"/>
 				</div>
-				<p>Now, to convert your interface with the .ui format into something you can program, you should enter the following command in Python communication: "pyuic6 -x .\your_name_interface.ui -o name_you_want.py." Afterward, to verify that it was indeed converted into Python format, enter the command "python .\interfaz.py."</p>
+				<p>Now, to convert your interface with the .ui format into something you can program, you should enter the following command in Python communication: "<b>pyuic6 -x .\your_name_interface.ui -o name_you_want.py</b>". Afterward, to verify that it was indeed converted into Python format, enter the command "<b>python .\interfaz.py</b>".</p>
 				<div class="align-center">
 					<img src="../assets/images/Week14/A08.jpeg" alt="" width="80%"/>
 				</div>
@@ -120,10 +142,18 @@
 						</video>
 					</div>
 				</div>
+				<p>In the video, we can see that by using the interface buttons, the LED on my XiaoESP32 PCB can be turned on and off.</p>
+
 
 				<h2>Problems</h2>
 				<p>This week, I didn't really encounter any issues, but while we were working on the group assignment, I learned that it's extremely important that once programming is done on the microcontroller, and if serial communication was used, it should be closed to program the interface. Otherwise, it throws an error. The only issue I sometimes faced was that the first time I ran the programs to integrate the interface with the microcontroller program, it didn't do anything, but reloading it made it start again, and it worked perfectly.</p>
-
+				<br>
+				<h2>Files</h2>
+				<ul>
+					<li><a href="../assets/files/Week14/Interface/Interface.ino" download>Interface.ino</a></li>
+					<li><a href="../assets/files/Week14/app.py" download>app.py</a></li>
+					<li><a href="../assets/files/Week14/interfaz.py" download>interfaz.py</a></li>
+				</ul>
 				
 
 				

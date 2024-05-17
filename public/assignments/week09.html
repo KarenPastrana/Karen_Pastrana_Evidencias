@@ -63,27 +63,40 @@
 					display and transmission of information for visualization. In terms of power consumption, 16x2 LCD 
 					displays typically require between 1 and 2 watts, depending on the backlighting technology used and 
 					the configured brightness.</p>
-				<p>
-					A potentiometer needs to be connected to an LCD screen to adjust the contrast
-					 and enable clear visibility of the displayed text. This adjustment is necessary because the backlight 
+				<p>A potentiometer will be connected to my PCB and will take the reading to send it to the LCD in order to adjust the brightness. This adjustment is necessary because the backlight 
 					 intensity and screen contrast may vary depending on environmental conditions and device settings. 
 					 By adjusting the potentiometer, the voltage applied to the screen can be modified, allowing for finding 
 					 the optimal contrast level for clear and legible text display under different lighting conditions.</p>
 				
 				<h2>What I learned from interfacing output divices</h2>	 
 				<p>As I mentioned, I used my PCB from <b><a href="https://fabacademy.org/2024/labs/puebla/students/brenda-pastrana/assignments/week08.html" target="_blank">my week 8</a></b>.</p>
-				<p>For the programming part, I used the Arduino software. To upload programs to the Attiny44, I utilized an Arduino UNO as a programmer, along with the following configurations.</p>
+
+				<p>To use the Arduino as a programmer, you need to upload the following code, which can be found under Files -> Examples -> 11.ArduinoISP -> ArduinoISP. Once you've loaded it, if your ATTINY44 is new, you need to set the following characteristics and make sure to select the bottom option that says Burn Bootloader.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week09/A09.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week09/A10.jpeg" alt="" width="40%"/>
+				</div>
+				<br>
+				<p>After that, you will be able to upload the desired code by making the connections shown in the PCB diagram with the Arduino UNO. However, it is important to upload the program from the Sketch -> Upload Using Programmer menu.</p>
 				<div class="align-center">
 					<img src="../assets/images/Week09/A05.jpeg" alt="" width="40%"/>
 					<img src="../assets/images/Week09/A06.jpeg" alt="" width="40%"/>
+					<img src="../assets/images/Week11/A05.jpeg" alt="" width="60%"/>
 				</div>
-				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:1082.12px;position:relative"><div style="width:100%;padding-bottom:74.02136546778547%"></div><iframe width="1082.12" height="801" title="" src="https://snappify.com/embed/6891a7a0-6fb4-4192-bb92-b1c74ed177ae/c5043381-9e04-490e-b71b-aa6963b99201?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
-
+				<br>
+				<p>Necessary connections for the LCD to the PCB of the ATTINY44</p>
+				<div class="align-center">
+					<img src="../assets/images/Week09/A08.jpeg" alt="" width="80%"/>
+				</div>
+				<p><b><a href="https://www.vishay.com/docs/37484/lcd016n002bcfhet.pdf" target="_blank">Data Sheet LCD 16X2</a></b>.</p>
+				<p>Here is the program I used to make the LCD work.</p>
+				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:676px;position:relative"><div style="width:100%;padding-bottom:78.10650887573965%"></div><iframe width="676" height="528" title="" src="https://snappify.com/embed/6891a7a0-6fb4-4192-bb92-b1c74ed177ae/c5043381-9e04-490e-b71b-aa6963b99201?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+				
 				<p>For this week, I used:</p>
 				<ul>
 					<li>2 resistors 0 ohms</li>
 					<li>PCB Attiny 44</li>
-					<li>6x2 LCD screen</li>
+					<li>16x2 LCD screen</li>
 					<li>Potentiometer</li>
 					<li>220 Ohm resistor</li>
 				</ul>
@@ -127,6 +140,7 @@
 						</video>
 					</div>
 				</div>
+				<p>In the following <b><a href="https://inputmakers.com/componentes/melodia-de-star-wars-con-arduino-y-zumbador/" target="_blank">link</a></b>, you can find the program I tried to use and more information.</p>
 
 				
 				<br>
@@ -134,7 +148,7 @@
 				<h2>Files</h2>
 				<ul>
 					<li><a href="../assets/files/Week09/HelloWorld/HelloWorld.ino" download>HelloWorld.ino</a></li>
-
+					<li><a href="../assets/files/Week09/Cancion/Cancion.ino" download>StarWars_Song.ino</a></li>
 				</ul>
 			</div>
 		</div>
