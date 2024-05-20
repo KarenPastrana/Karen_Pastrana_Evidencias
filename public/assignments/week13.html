@@ -55,7 +55,7 @@
 				<p>Here you will find the <b><a href="https://fabacademy.org/2024/labs/puebla/week13/" target="_blank">group assignment</a></b> with a little more information about the Networking and communications.</p>
 				
 				<div class="align-center">
-					<img src="../assets/images/Week13/A01.jpeg" alt="" width="20%"/>
+					<img src="../assets/images/Week13/A05.jpeg" alt="" width="70%"/>
 				</div>
 				<h2>Research</h2>
 				<p>The I2C communication, which stands for Inter-Integrated Circuit, is a serial communication protocol that enables data transfer between devices using only two wires: one for data transmission (SDA) and another for signal synchronization (SCL). In I2C communication, devices are connected on a shared bus, where each device has a unique 7-bit address. This allows communication between multiple devices on the same network without address conflicts.</p>
@@ -79,19 +79,19 @@
 				</div>
 				<br>
 				<h2>Programming</h2>
+				<p>For the programming part, it is important to follow the following setup where I used the Xiao ESP32C3 microcontroller as the master, the Attiny 85 as slave 1, and the Arduino UNO as slave 2.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week13/A07.jpeg" alt="" width="90%"/>
+				</div>
+				<p>It is important to upload the code to each microcontroller one by one to avoid confusion. The way of programming the Attiny 85 in this case was different from what I'm used to. From my experience, the Attiny 85 is first programmed using the Arduino UNO as the programmer. Once that is done, it is placed in the circuit where it will perform its function, connecting only the power and ground wires. That is, first it will be placed on a breadboard as follows:</p>
+				<div class="align-center">
+					<img src="../assets/images/Week13/A06.jpeg" alt="" width="60%"/>
+				</div>
+				<p>Once the desired code is loaded, it is placed on the PCB. Now, it just remains to ensure that each microcontroller is connected correctly and has its corresponding code.</p>
+				<p>For the coding part, I will set up a serial communication between them, where the master must have the names of the slaves to know exactly to whom it is sending information and to send a number indicating what needs to be done. On the other hand, the slaves need to include their name in the part that indicates Wire.begin(#) in their code, and specify what they will do if the master calls them and what they will do if they are not being called.</p>
 				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:942px;position:relative"><div style="width:100%;padding-bottom:79.40552016985139%"></div><iframe width="942" height="748" title="" src="https://snappify.com/embed/10ad77cb-ede5-48df-adec-650a21f612f0/a9e00b20-a042-4712-8a80-fd55f35754c6?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
 				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:455px;position:relative"><div style="width:100%;padding-bottom:131.2087912087912%"></div><iframe width="455" height="597" title="" src="https://snappify.com/embed/10ad77cb-ede5-48df-adec-650a21f612f0/496c6efb-b95f-4f80-882b-ce1ddf304a47?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
-				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:448px;position:relative"><div style="width:100%;padding-bottom:130.35714285714286%"></div><iframe width="448" height="584" title="" src="https://snappify.com/embed/10ad77cb-ede5-48df-adec-650a21f612f0/405658a1-b28f-4d94-9c11-3388d4303d9b?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
-
-				<br>
-				<h2>Problems</h2>
-				<h3>PCB ATTINY44</h3>
-				<p>I was thinking on use the third microcontroller that I made: ATTINY44, which I created during <b><a href="https://fabacademy.org/2024/labs/puebla/students/brenda-pastrana/assignments/week08.html" target="_blank">week 8.</a></b></p>
-				<div class="align-center">
-					<img src="../assets/images/Week08/A01.jpeg" alt="" width="40%"/>
-				</div>
-
-				<h2>Video</h2>
+				<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:448px;position:relative"><div style="width:100%;padding-bottom:130.35714285714286%"></div><iframe width="448" height="584" title="" src="https://snappify.com/embed/10ad77cb-ede5-48df-adec-650a21f612f0/405658a1-b28f-4d94-9c11-3388d4303d9b?responsive=1&b=1" allow="clipboard-write" allowfullscreen="" loading="lazy" style="background:#ffffff00;position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>				<h2>Video</h2>
 				<div class="box alt">
 					<div class="video-wrapper">
 						<video width="560" height="315" controls>
@@ -100,8 +100,19 @@
 						</video>
 					</div>
 				</div>
-
-				
+				<br>
+				<h2>Problems</h2>
+				<p>This week, to be honest, has been the most complicated one I've had so far. Mainly because when trying to set up the communication with my Xiao RP2040, I connected 2 resistors where it indicated they should go in SDA and SCL, but in doing so, the GND made contact with the 3V, causing my microcontroller to die. This was the one I planned to use as the master since that PCB had a button. Later, I made a PCB with an attiny 85, which did have a button, and another PCB with a Xiao ESP32C3. The problem with this one was that it didn't have an implemented button, so I decided to make the attiny 85 the master and the attiny 44 and the Xiao ESP32C3 the slaves. Despite several attempts, it didn't work.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week13/A01.jpeg" alt="" width="40%"/>
+				</div>
+				<p>After several weeks, I decided to try again, but this time I made a PCB to include buttons. This way, the Xiao ESP32C3 would be the master and the attiny 85 and 44 the slaves. The issue then was that when I first connected the Xiao ESP32C3 to the attiny 44, upon powering everything up, the attiny 44 smoked and heated up, so I immediately disconnected everything. After testing the attiny 44 again with a simple code to turn an LED on and off and seeing it worked, I was relieved, but I didn't want to keep trying with it.</p>
+				<p><b><a href="https://fabacademy.org/2024/labs/puebla/students/brenda-pastrana/assignments/week08.html" target="_blank">ATTINY44</a></b></p>
+				<div class="align-center">
+					<img src="../assets/images/Week08/A01.jpeg" alt="" width="40%"/>
+				</div>
+				<p>So, finally, my last option was to make the Xiao ESP32C3 the master, the attiny 85 a slave, and an Arduino UNO a slave. With this setup, everything worked fine.</p>
+						
 				<br>
 
 				<h2>Files</h2>
