@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Brenda Pastrana - Fab Academy</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Fab Academy documentation site for Your Name">
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="../index.html" class="logo">
+					<span class="symbol"><img src="../assets/images/logo.svg" alt="" /></span><span class="title">Brenda Pastrana -
+						FAB ACADEMY</span>
+				</a>
+
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="../index.html">Assignments</a></li>
+				<li><a href="../finalproject.html">Final project</a></li>
+				<li><a href="../about.html">About me</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h1>16. Applications and implications</h1>
+
+				<h2>What will it do?</h2>
+				<p>It will be a clock that tells the time. The interesting thing is that each digit will be made mechanically, 
+					meaning it will be a clock with digits that are mechanical displays instead of using LEDs to turn the 
+					segments of each digit on and off. This clock can also switch to a Pomodoro method mode, which would work 
+					very well for me because I tend to get tired of doing some work or studying, and when I take a break, I usually 
+					don't go back to the same thing. It will also display the room temperature and the temperature of your 
+					city on a screen.</p>
+				
+				<h2>Who has done what beforehand?</h2>
+				<p>I haven't found anyone who has made a mechanical clock with the Pomodoro method. What I have seen recently 
+					is that people have been designing mechanical 7-segment displays. For example, a guy who calls himself JBC 
+					Creative uploaded a mechanical 7-segment display. <b><a href="https://twitter.com/jbvcreative/status/1780356814170718312?s=48" target="_blank">Rack Driven 7 Segment Display</a></b>, but in my opinion, it is too wide, and he sells his design. 
+					Later, he joined six of these to make a clock that moves with motors. After researching more to understand the 
+					functioning of the gears, I noticed that the same guy uploaded an even thinner display, but he hasn't shared 
+					that design <b><a href="https://www.youtube.com/shorts/pGf1Ritfatg" target="_blank">Mecanical 7 Segment Display</a></b>. However, by investigating more on the internet, I found a free-use 7-segment display by the author 
+					Floer-3D, although his design is manual, meaning if you want to change the number, you have to press a button 
+					yourself. <b><a href="https://www.printables.com/en/model/860058-7-segment-mechanical-counter-version-21-ratchet-wi" target="_blank">7 Segment Mechanical Counter</a></b></p>
+				
+				<h2>What will I design?</h2>	
+				<p>I noticed that the free-use 7-segment display by Floer-3D has aspects that can be improved. Since the idea is not to manually press each time you want to change a number but to have motors do it, I am working on modifications 
+					to the design to be able to place a motor, thus using only six motors in total. It would be incredible to make the six displays and, through a larger gear, combine them into one, so only one motor would be needed, though that 
+					might be very ambitious.</p>
+				<p>Additionally, I need to design where all the circuits will be mounted and the casing to place the screen. Everything else will be a matter of programming.</p>
+
+				<h2>What materials and components will be used?</h2>
+				<ul>
+					<li>3D printing (PLA)</li>
+					<li>6 stepper motors / servomotors</li>
+					<li>Xiao ESP32C3</li>
+					<li>OLED screen</li>
+					<li>MDF (casing to house everything)</li>
+				</ul>
+				<h2>Where will they come from?</h2>
+				<p>Materials such as the Xiao ESP32C3, PLA, and MDF have been provided by the FabLab Puebla. The OLED screen and motors/servomotors will be sourced from the center of Puebla, or alternatively, I will find out if the FabLab Puebla has them.</p>
+
+				<h2>How much will they cost?</h2>
+
+				<h2>What parts and systems will be made?</h2>
+				<p>As mentioned, the displays to show the clock numbers will be mechanical, so the parts for the six displays will be either 3D printed or laser cut. The casing for my project will also be made.</p>
+
+				<h2>What processes will be used?</h2>
+				<p>For now, the plan is to use 3D printing, laser cutting or possibly router cutting, PCB manufacturing, and programming.</p>
+
+				<h2>What questions need to be answered?</h2>
+				<ul>
+					<li>How to make a better mechanism performance for the 7-segment display?</li>
+					<li>Can a mechanism for the 6 segments be assembled?</li>
+					<li>How convenient is it to 3D print the parts? Is laser cutting more convenient?</li>
+					<li>If cut in MDF, will it wear out?</li>
+					<li>What speed can the mechanism withstand?</li>
+					<li>How difficult will it be to establish communication with an API to get the location, local time, and weather?</li>
+				</ul>
+
+				<h2>How will it be evaluated?</h2>
+				<ol>
+					<li>Function as a clock</li>
+					<li>Function as a Pomodoro timer</li>
+					<li>Switch between clock and Pomodoro timer modes</li>
+					<li>Display the room temperature</li>
+					<li>Display the city's temperature</li>
+				</ol>
+
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					
+				</section>
+				<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li><a href="https://twitter.com/BrendaSofiaPM" target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+						</li>
+						<li><a href="https://www.facebook.com/profile.php?id=100073113653006&mibextid=LQQJ4d" target="_blank" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="https://www.instagram.com/brenda_sofia_pm?igsh=MWk1Y2F5NG1kZWR2dw%3D%3D&utm_source=qr" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="https://api.whatsapp.com/send?phone=525574122904&text=" target="_blank" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="mailto:brendasofiapastrana@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://t.snapchat.com/OyBRLwUe" target="_blank" class="icon solid style2 snapchat"><span class="label">Snapchat</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Copyright 2024 Brenda Pastrana </li>
+					<li>Creative Commons Attribution Non Commercial</li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
