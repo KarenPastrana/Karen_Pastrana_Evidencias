@@ -67,12 +67,13 @@
 				manufacturing. With this technique, a high-precision milling head is guided by a computer program 
 				to cut away excess copper from the board, thereby creating printed circuits with exceptional accuracy 
 				and detail.</p>
-				<h3>FAB LAB Puebla Laser Cutters</h3>
+				<h3>FAB LAB Puebla Electronics Production</h3>
 				<p>The Universidad Ibero Puebla has a high-quality CNC milling machine, the ROLAND SRM-20, which enables 
 				students in FabLab to fabricate their own PCBs efficiently and accurately. This equipment provides an 
 				opportunity for learning and working with cutting-edge technology, fostering the development of 
 				practical skills and innovation in the field of electronics.</p>
-				<p>You can see the group assignment here. <b><a href="https://fabacademy.org/2024/labs/puebla/week4/" target="_blank">FAB LAB Puebla Laser Cutters.</a></b></p>
+				<p>You can see the group assignment here. <b><a href="https://fabacademy.org/2024/labs/puebla/week4/" target="_blank">FAB LAB Puebla Electronics Production. </a></b>
+					I think one of the key points to highlight about this group task is that we need to consider how wide we configure our tracks. If we don't take into account the thickness of our tool, it can eat up a good portion of the track. Considering that it's important to have wider tracks for higher amperage and to avoid short circuits, this is something that must be taken into consideration.</p>
 
 				<h2>How I made the toolpad</h2>
 				<ol>
@@ -186,7 +187,6 @@
 						<img src="../assets/images/Week04/A24.jpeg" alt="" width="300px"/>
 					</div>
 				</ol>
-				<p>Once I obtained the board, I removed it to solder it with the components, then I loaded the program that is located in the download list at the bottom of the page.</p>
 				<p>For the soldering part, I encountered some small issues because the insulating tape I placed behind the microcontroller shrunk, causing some parts to come into contact with the PCB tracks. My solution was to place the microcontroller with slightly taller pins.</p>
 				<ol>
 					<p>The components that I used and soldered were:</p>
@@ -199,8 +199,36 @@
 				<div class="align-center">
 					<img src="../assets/images/Week04/A25.jpeg" alt="" width="300px"/>
 					<img src="../assets/images/Week04/A26.jpeg" alt="" width="300px"/>
+				</div>
+
+				<p>Once I obtained the board, I removed it to solder it with the components, then I loaded the program that is located in the download list at the bottom of the page.</p>
+				<h3>Programming in Arduino</h3>
+				<p>Arduino is an integrated development environment (IDE) and an open-source hardware platform used for prototyping electronic projects. As programming software, Arduino provides users with a friendly environment to write, compile, and upload code to Arduino microcontroller boards. With a wide range of libraries and a simple syntax based on C/C++, its popularity stems from its accessibility, versatility, and active community of users who share knowledge and projects.</p>
+				<p>For this part of Arduino programming, I selected the following steps: </p>
+				<p>First, you must download the following link 
+				"//github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json" by copying and pasting 
+				it into the File -> Preferences section.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week06/B06.jpeg" alt="" width="45%"/>
+					<img src="../assets/images/Week06/B08.jpeg" alt="" width="45%"/>
+				</div>
+				<p>Then, in the Select Board section, I pressed "Select other board and port".</p>
+				<div class="align-center">
+					<img src="../assets/images/Week06/B05.jpeg" alt="" width="50%"/>
+				</div>
+				<p>I search for the "Seeed XIAO RP2040" microcontroller and make sure to carefully select the correct port to avoid struggling with uploading the program.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week06/B06.jpeg" alt="" width="50%"/>
+				</div>
+				<p>Now, all that's left is to upload the program with the following button, and that's it.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week04/Z01.jpg" alt="" width="50%"/>
+				</div>
+				
+				<div class="align-center">
 					<img src="../assets/images/Week04/A27.jpeg" alt="" width="300px"/>
 				</div>
+
 				
 				<h2>Problems and how I fixed them</h2>
 				<ul>
@@ -210,7 +238,8 @@
 					<li>When I started soldering, some solder dripped, causing continuity between ground and voltage when checked. Consequently, I had to remove several components again to clear away the spilled solder.</li>
 				</ul>
 				
-
+				<h2>Conclusion</h2>
+				<p>For this week, the most important thing was learning how to use the machine so that I can later learn to make my own PCBs. For now, the most important thing was understanding how to place the tools and the correct way to position the copper board on the bed, as well as configuring the G-code.</p>
 				
 				<br>
 
