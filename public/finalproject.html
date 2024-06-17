@@ -95,6 +95,161 @@
 							Your browser does not support the video tag.
 						</video>
 					</div>
+
+					<h2>What will it do?</h2>
+					<p>It will be a clock that tells the time. The interesting thing is that each digit will be made mechanically, 
+						meaning it will be a clock with digits that are mechanical displays instead of using LEDs to turn the 
+						segments of each digit on and off. This clock can also switch to a Pomodoro method mode, which would work 
+						very well for me because I tend to get tired of doing some work or studying, and when I take a break, I usually 
+						don't go back to the same thing. It will also display the room temperature and the temperature of your 
+						city on a screen.</p>
+					
+					<h2>Who has done what beforehand?</h2>
+					<p>I haven't found anyone who has made a mechanical clock with the Pomodoro method. What I have seen recently 
+						is that people have been designing mechanical 7-segment displays. For example, a guy who calls himself JBC 
+						Creative uploaded a mechanical 7-segment display. <b><a href="https://twitter.com/jbvcreative/status/1780356814170718312?s=48" target="_blank">Rack Driven 7 Segment Display</a></b>, but in my opinion, it is too wide, and he sells his design. 
+						Later, he joined six of these to make a clock that moves with motors. After researching more to understand the 
+						functioning of the gears, I noticed that the same guy uploaded an even thinner display, but he hasn't shared 
+						that design <b><a href="https://www.youtube.com/shorts/pGf1Ritfatg" target="_blank">Mecanical 7 Segment Display</a></b>. However, by investigating more on the internet, I found a free-use 7-segment display by the author 			
+						Flower-3D, although his design is manual, meaning if you want to change the number, you have to press a button 
+						yourself. <b><a href="https://www.printables.com/en/model/860058-7-segment-mechanical-counter-version-21-ratchet-wi" target="_blank">7 Segment Mechanical Counter</a></b></p>
+					<p>There are some problems with the design of Flower-3D, for example, the segments do not completely hide or at certain points, the numbers are not fully visible because the gears did not move correctly.</p>
+						<div class="align-center">
+							<img src="../assets/images/Week16/A01.jpg" alt="" width="80%"/>
+						</div>
+						<br>
+					<h2>What will I design?</h2>	
+					<p>I noticed that the free-use 7-segment display by Floer-3D has aspects that can be improved. Since the idea is not to manually press each time you want to change a number but to have motors do it, I am working on modifications 
+						to the design to be able to place a motor, thus using only six motors in total. It would be incredible to make the six displays and, through a larger gear, combine them into one, so only one motor would be needed, though that 
+						might be very ambitious.</p>
+					<p>Additionally, I need to design where all the circuits will be mounted and the casing to place the screen. Everything else will be a matter of programming.</p>
+	
+					<h2>What materials and components will be used?</h2>
+					<ul>
+						<li>3D printing (PLA)</li>
+						<li>6 stepper motors / servomotors</li>
+						<li>Xiao ESP32C3</li>
+						<li>OLED screen</li>
+						<li>MDF (casing to house everything)</li>
+					</ul>
+					<h2>Where will they come from?</h2>
+					<p>Materials such as the Xiao ESP32C3, PLA, and MDF have been provided by the FabLab Puebla. The OLED screen and motors/servomotors will be sourced from the center of Puebla, or alternatively, I will find out if the FabLab Puebla has them.</p>
+	
+					<h2>How much will they cost?</h2>
+	
+					<body>
+						<h2>Materials List</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>Material</th>
+									<th>Quantity Used</th>
+									<th>Supplier</th>
+									<th>Unit Cost (USD)</th>
+									<th>Total (USD)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>NEMA 17 Stepper Motor</td>
+									<td>4</td>
+									<td>Steren</td>
+									<td>$13.39</td>
+									<td>$53.56</td>
+								</tr>
+								<tr>
+									<td>A4988 Stepper Motor Driver Module</td>
+									<td>4</td>
+									<td>Steren</td>
+									<td>$3.23</td>
+									<td>$12.92</td>
+								</tr>
+								<tr>
+									<td>XIAO ESP32C3</td>
+									<td>1</td>
+									<td>Mercado Libre</td>
+									<td>$12.10</td>
+									<td>$12.10</td>
+								</tr>
+								<tr>
+									<td>RTC DS3231</td>
+									<td>1</td>
+									<td>Mercado Libre</td>
+									<td>$3.76</td>
+									<td>$3.76</td>
+								</tr>
+							</tbody>
+						</table>
+					</body>
+	
+					<h2>What parts and systems will be made?</h2>
+					<p>As mentioned, the displays to show the clock numbers will be mechanical, so the parts for the six displays will be either 3D printed or laser cut. The casing for my project will also be made.</p>
+	
+					<h2>What processes will be used?</h2>
+					<p>For now, the plan is to use 3D printing, laser cutting or possibly router cutting, PCB manufacturing, and programming.</p>
+	
+					<h2>What questions need to be answered?</h2>
+					<ul>
+						<li>How to make a better mechanism performance for the 7-segment display?</li>
+						<li>Can a mechanism for the 6 segments be assembled?</li>
+						<li>How convenient is it to 3D print the parts? Is laser cutting more convenient?</li>
+						<li>If cut in MDF, will it wear out?</li>
+						<li>What speed can the mechanism withstand?</li>
+						<li>How difficult will it be to establish communication with an API to get the location, local time, and weather?</li>
+					</ul>
+	
+					<h2>How will it be evaluated?</h2>
+					<ol>
+						<li>Function as a clock</li>
+						<li>Function as a Pomodoro timer</li>
+						<li>Switch between clock and Pomodoro timer modes</li>
+						<li>Display the room temperature</li>
+						<li>Display the city's temperature</li>
+					</ol>
+
+					<h2>What tasks have been completed?</h2>
+				<ul>
+					<li>Design of the mechanical 7-segment display, inspired by a model made by: <b><a href="https://www.printables.com/en/model/860058-7-segment-mechanical-counter-version-21-ratchet-wi" target="_blank">7 Segment Mechanical Counter</a></b></li>
+					<li>Motor programming</li>
+					<li>Integration of motors with the display</li>
+					<li>Pomodoro Timer</li>
+					<li>Local weather programming</li>
+				</ul>
+				<div class="align-center">
+					<img src="assets/images/FinalProject/A1.jpeg" alt="" width="60%"/>
+				</div>
+				
+			
+				<h2>What tasks remain?</h2>
+				<ul>
+					<li>Weather via API</li>
+					<li>Case redesign</li>
+					<li>Make PCB</li>
+				</ul>
+			
+				<h2>What has worked? What hasn't?</h2>
+				<p>So far, the function of mechanically changing the numbers for the clock part has been a bit difficult, but it is still in progress and I need to program it to change the numbers.</p>
+				<p>On the other hand, I made a case to place everything, but it didn't fit perfectly, so I need to redesign it.</p>
+				<p>I also had cut the PCB, but due to a small unevenness, some tracks were eaten up, so I need to redo it.</p>
+				<div class="align-center">
+					<img src="assets/images/FinalProject/A2.jpeg" alt="" width="60%"/>
+				</div>
+
+				<h2>What questions need to be resolved?</h2>
+				<ul>
+					<li>How can I make a coupler that adjusts better and has more force to turn the motor?</li>
+					<li>How to obtain variables to indicate the number of steps the mechanical number should advance?</li>
+					<li>How can I include the weather API?</li>
+				</ul>
+			
+				<h2>What will happen when?</h2>
+				<p>For now, I will follow the schedule, and the remaining parts will be taken as tests and adjustments, as well as system programming.</p>
+				<div class="align-center">
+					<img src="../assets/images/FinalProject/TempoSphere gantt chart.png" alt="" width="60%"/>
+				</div>
+				<br>
+				<h2>What have you learned?</h2>
+				<p>So far, I have learned many ways to control the NEMA 17 stepper motors. At first, I was testing with H-Bridge Modules, but they were too large and consumed a lot of current, losing power when placing 2, so they no longer had enough torque to turn the motor. I also discovered that there is a module that allows me to keep the time and display the temperature, RTC DS3231.</p>
 				</div>
 				<!--<h3>Some of the problems of the current breastplate:</h3>
 				<h3>Advantages</h3>
