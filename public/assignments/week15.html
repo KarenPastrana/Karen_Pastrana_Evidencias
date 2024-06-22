@@ -10,6 +10,45 @@
 	<noscript>
 		<link rel="stylesheet" href="../assets/css/noscript.css" />
 	</noscript>
+
+	<style>
+        .bar-container {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            justify-content: center; /* Centra las barras horizontalmente */
+        }
+
+        .label {
+            width: 80px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .bar-outer {
+			width: 100%; /* Ajuste del ancho al 50% */
+			background-color: #e1ecec;
+			position: relative; /* Para permitir el uso de box-sizing */
+			overflow: hidden; /* Para evitar que el contenido se salga */
+			border-radius: 10px; /* Esquinas redondeadas */
+		}
+
+        .bar-inner {
+			height: 40px;
+			text-align: left;
+			color: rgb(2, 15, 15);
+			background-color: #a34caf;
+			white-space: nowrap; /* Evita que el texto se desborde en varias líneas */
+			box-sizing: border-box; /* Asegura que el padding y el ancho se manejen correctamente */
+			padding: 5px; /* Añade un poco de espacio entre el borde y el texto */
+		}
+
+        .align-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -54,71 +93,87 @@
 					For this wildcard week, I decided to train an artificial intelligence to be able to recognize among unicorns, dogs, cats, and everything else to be treated as background nothing.</p>
 
 				<h2>Research</h2>
+				<p>Artificial intelligence (AI) is a field of computer science focused on creating systems capable of performing tasks that typically require human intelligence. This includes visual perception, speech recognition, decision-making, and learning. Machine learning, on the other hand, is a discipline within AI that concentrates on developing algorithms and models that enable machines to learn and improve from data without explicit programming. In essence, while AI refers to the broader field of creating intelligent systems, machine learning is a key technique used within AI to enable systems to learn and adapt automatically based on experience.</p>
 				<p>In simple terms, machine learning is a branch of artificial intelligence that focuses on developing algorithms and models that enable computers to learn how to perform specific tasks without being explicitly programmed for each one.</p>
 				<p>Instead of following step-by-step instructions, as would be done in traditional programming, in machine learning, algorithms use data to learn patterns and make predictions or decisions. These algorithms are trained using input datasets, which consist of input examples and the expected output, and through iterations, they adjust their internal parameters to improve their performance on the specific task.</p>
 				<p>There are several types of machine learning, including supervised learning, where the algorithm is trained on a set of labeled data, unsupervised learning, where the algorithm finds patterns in unlabeled data, and reinforcement learning, where the algorithm learns through interaction with an environment and the feedback it receives.</p>	
+				<p>What I'm going to try is an object classifier, and I used the Teachable Machine platform. You can try it by clicking on START.</p>
 					
 				<div class="align-center">
-					<div>Teachable Machine Image Model</div>
-					<button type="button" onclick="init()">Start</button>
-					<div id="webcam-container"></div>
-					<div id="label-container"></div>
-					<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-					<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-					<script type="text/javascript">
-						// More API functions here:
-						// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-					
-						// the link to your model provided by Teachable Machine export panel
-						const URL = "https://teachablemachine.withgoogle.com/models/Luma71RZ_/";
-					
-						let model, webcam, labelContainer, maxPredictions;
-					
-						// Load the image model and setup the webcam
-						async function init() {
-							const modelURL = URL + "model.json";
-							const metadataURL = URL + "metadata.json";
-					
-							// load the model and metadata
-							// Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-							// or files from your local hard drive
-							// Note: the pose library adds "tmImage" object to your window (window.tmImage)
-							model = await tmImage.load(modelURL, metadataURL);
-							maxPredictions = model.getTotalClasses();
-					
-							// Convenience function to setup a webcam
-							const flip = true; // whether to flip the webcam
-							webcam = new tmImage.Webcam(450, 450, flip); // width, height, flip
-							await webcam.setup(); // request access to the webcam
-							await webcam.play();
-							window.requestAnimationFrame(loop);
-					
-							// append elements to the DOM
-							document.getElementById("webcam-container").appendChild(webcam.canvas);
-							labelContainer = document.getElementById("label-container");
-							for (let i = 0; i < maxPredictions; i++) { // and class labels
-								labelContainer.appendChild(document.createElement("div"));
-							}
-						}
-					
-						async function loop() {
-							webcam.update(); // update the webcam frame
-							await predict();
-							window.requestAnimationFrame(loop);
-						}
-					
-						// run the webcam image through the image model
-						async function predict() {
-							// predict can take in an image, video or canvas html element
-							const prediction = await model.predict(webcam.canvas);
-							for (let i = 0; i < maxPredictions; i++) {
-								const classPrediction =
-									prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-								labelContainer.childNodes[i].innerHTML = classPrediction;
-							}
-						}
-					</script>
-				</div>	
+                    <div>Teachable Machine Image Model</div>
+                    <button type="button" onclick="init()">Start</button>
+                    <div id="webcam-container"></div>
+                    <div id="label-container"></div>
+                    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+                    <script type="text/javascript">
+                        // More API functions here:
+                        // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+                        // the link to your model provided by Teachable Machine export panel
+                        const URL = "https://teachablemachine.withgoogle.com/models/Luma71RZ_/";
+
+                        let model, webcam, labelContainer, maxPredictions;
+
+                        // Load the image model and setup the webcam
+                        async function init() {
+                            const modelURL = URL + "model.json";
+                            const metadataURL = URL + "metadata.json";
+
+                            // load the model and metadata
+                            model = await tmImage.load(modelURL, metadataURL);
+                            maxPredictions = model.getTotalClasses();
+
+                            // Convenience function to setup a webcam
+                            const flip = true; // whether to flip the webcam
+                            webcam = new tmImage.Webcam(450, 450, flip); // width, height, flip
+                            await webcam.setup(); // request access to the webcam
+                            await webcam.play();
+                            window.requestAnimationFrame(loop);
+
+                            // append elements to the DOM
+                            document.getElementById("webcam-container").appendChild(webcam.canvas);
+                            labelContainer = document.getElementById("label-container");
+                            for (let i = 0; i < maxPredictions; i++) {
+                                const barContainer = document.createElement("div");
+                                barContainer.className = "bar-container";
+
+                                const label = document.createElement("div");
+                                label.className = "label";
+                                barContainer.appendChild(label);
+
+                                const barOuter = document.createElement("div");
+                                barOuter.className = "bar-outer";
+
+                                const barInner = document.createElement("div");
+                                barInner.className = "bar-inner";
+                                barOuter.appendChild(barInner);
+
+                                barContainer.appendChild(barOuter);
+
+                                labelContainer.appendChild(barContainer);
+                            }
+                        }
+
+                        async function loop() {
+                            webcam.update(); // update the webcam frame
+                            await predict();
+                            window.requestAnimationFrame(loop);
+                        }
+
+                        // run the webcam image through the image model
+                        async function predict() {
+                            // predict can take in an image, video or canvas html element
+                            const prediction = await model.predict(webcam.canvas);
+                            for (let i = 0; i < maxPredictions; i++) {
+                                const classPrediction = prediction[i].className + ": " + (prediction[i].probability * 100).toFixed(2) + "%";
+                                labelContainer.childNodes[i].childNodes[0].innerHTML = prediction[i].className;
+                                labelContainer.childNodes[i].childNodes[1].childNodes[0].style.width = (prediction[i].probability * 100) + "%";
+                                labelContainer.childNodes[i].childNodes[1].childNodes[0].innerHTML = (prediction[i].probability * 100).toFixed(2) + "%";
+                            }
+                        }
+                    </script>
+                </div>	
 				<br>
 				<h2>Steps to create your machine learning model</h2>
 				<ol>
