@@ -62,13 +62,121 @@
 							</video>
 						</div>
 					</div>
-				<!-- <h2>F1 race track where you can see in real time the location of the cars.</h2> -->
+				<br>
+				<h2>What does it do?</h2>
+				<p>By using mechanical displays, it can change the numbers to show the Pomodoro method, as well as display the time on an OLED screen and show the weather.</p>
+
+				<h2>Who’s done what beforehand?</h2>
+				<p>I haven't found anyone who has made a mechanical clock with the Pomodoro method. What I have seen recently 
+					is that people have been designing mechanical 7-segment displays. For example, a guy who calls himself JBC 
+					Creative uploaded a mechanical 7-segment display. <b><a href="https://twitter.com/jbvcreative/status/1780356814170718312?s=48" target="_blank">Rack Driven 7 Segment Display</a></b>, but in my opinion, it is too wide, and he sells his design. 
+					Later, he joined six of these to make a clock that moves with motors. After researching more to understand the 
+					functioning of the gears, I noticed that the same guy uploaded an even thinner display, but he hasn't shared 
+					that design <b><a href="https://www.youtube.com/shorts/pGf1Ritfatg" target="_blank">Mecanical 7 Segment Display</a></b>. However, by investigating more on the internet, I found a free-use 7-segment display by the author 			
+					Flower-3D, although his design is manual, meaning if you want to change the number, you have to press a button 
+					yourself. <b><a href="https://www.printables.com/en/model/860058-7-segment-mechanical-counter-version-21-ratchet-wi" target="_blank">7 Segment Mechanical Counter</a></b></p>
+				<p>There are some problems with the design of Flower-3D, for example, the segments do not completely hide or at certain points, the numbers are not fully visible because the gears did not move correctly.</p>
+				<div class="align-center">
+					<img src="../assets/images/Week16/A01.jpg" alt="" width="80%"/>
+				</div>
+				
+				<h2>What did you design?</h2>
+				<p>I designed the casing to hold everything in MDF. I also designed the PCB to control all the motors and sensors used.</p>
+				<h2>What materials and components were used?</h2>
+				<ul>
+					<li>PLA for 3D printing the mechanical displays and casing.</li>
+					<li>MDF for the casing.</li>
+					<li>NEMA 17 stepper motors.</li>
+					<li>A4988 stepper motor driver modules.</li>
+					<li>Xiao ESP32C3 microcontroller.</li>
+					<li>PCF8574 I2C GPIO Expander Module.</li>
+					<li>OLED screen.</li>
+					<li>RTC DS3231 module.</li>
+					<li>Button.</li>
+					<li>220 ohm resistors.</li>
+				</ul>
+				<h2>Where did they come from?</h2>
+				<p>Materials such as the Xiao ESP32C3, PLA, and MDF were provided by FabLab Puebla. The OLED screen and motors were sourced from local suppliers in Puebla, or alternatively, they were acquired through online stores like Mercado Libre and Amazon</p>
+				<h2>How much did they cost?</h2>
+				<body>
+					<h2>Materials List</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Material</th>
+								<th>Quantity Used</th>
+								<th>Supplier</th>
+								<th>Unit Cost (USD)</th>
+								<th>Total (USD)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>NEMA 17 Stepper Motor</td>
+								<td>4</td>
+								<td><a href="https://www.steren.com.mx/motor-a-pasos-nema-17.html" target="_blank">Steren </a></td>
+								<td>$13.39</td>
+								<td>$53.56</td>
+							</tr>
+							<tr>
+								<td>A4988 Stepper Motor Driver Module</td>
+								<td>4</td>
+								<td><a href="https://articulo.mercadolibre.com.mx/MLM-777272833-driver-de-motor-a-pasos-a4988-arduino-nema-17-stepper-motor-_JM?matt_tool=28238160&utm_source=google_shopping&utm_medium=organic" target="_blank">Mercado Libre </a></td>
+								<td>$3.23</td>
+								<td>$12.92</td>
+							</tr>
+							<tr>
+								<td>XIAO ESP32C3</td>
+								<td>1</td>
+								<td><a href="https://www.amazon.com.mx/Seeed-Studio-XIAO-ESP32C3-Microcontrolador/dp/B0B94JZ2YF" target="_blank">Amazon </a></td>
+								<td>$19.99</td>
+								<td>$19.99</td>
+							</tr>
+							<tr>
+								<td>RTC DS3231</td>
+								<td>1</td>
+								<td><a href="https://articulo.mercadolibre.com.mx/MLM-641624160-modulo-reloj-de-tiempo-real-rtc-ds3231-_JM?matt_tool=74125127&matt_word=&matt_source=google&matt_campaign_id=19641074588&matt_ad_group_id=160319647191&matt_match_type=&matt_network=g&matt_device=c&matt_creative=686683728628&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=164788322&matt_product_id=MLM641624160&matt_product_partition_id=2291870219994&matt_target_id=aud-2010778457741:pla-2291870219994&cq_src=google_ads&cq_cmp=19641074588&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-fRgwT6lHKAWmud23-hlRFFo_G5pipYg_Y0py9AXue7a8fJOOiR7gBoCxvIQAvD_BwE" target="_blank">Mercado Libre</a></td>
+								<td>$4.64</td>
+								<td>$4.64</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><b>Total</b></td>
+								<td>$91.11</td>
+							</tr>
+						</tbody>
+					</table>
+				</body>
+				<h2>What parts and systems were made?</h2>
+				<ul>
+					<li>Mechanical 7-segment displays.</li>
+					<li>Casing for housing the components.</li>
+					<li>Circuit boards for the control system.</li>
+					<li>Integration of all parts into a functioning clock and timer.</li>
+				</ul>
+
+				<h2>What processes were used?</h2>
+				<ul>
+					<li>3D printing for the mechanical parts and casing.</li>
+					<li>Laser cutting or router cutting for the casing.</li>
+					<li>PCB manufacturing.</li>
+					<li>Programming the microcontroller to control the displays and handle timekeeping, Pomodoro timing, and weather display.</li>
+				</ul>
+
+				<h2>What questions were answered?</h2>
+
+				<h2>What worked? What didn’t?</h2>
+
+				<h2>How was it evaluated?</h2>
+
+				<h2>What are the implications?</h2>
+
+
+
+
 				<h2>Clock with a Pomodoro timer and weather</h2>
-				<!-- <p>The idea started seeing that with the Apple Vision Pro is promoted that you can see in real time the F1
-					 race, and I find it very interesting idea, although the detail is that only the person who is using
-					  the device will be the only person who can see the race, then I thought that maybe with projectors
-					   style lamps that were attached to the corners of the table could do the same and thus to see with 
-					   several people at once the race and feel that emotion.  </p> -->
 				<p>The idea of this project is to have a clock with different functionalities so that you can better organize yourself with the Pomodoro Technique. The concept is that with a button, you can switch between clock function and the technique, and possibly also connect an interface that allows you to do so from a device. It would also feature a screen displaying the room's climate and, through an API, be able to view the weather of the city you are in.</p>
 				<p>Previously, the idea was to use one motor for each numeric segment, totaling 42 motors for the clock, but this was clearly not practical. After some research, I found that mechanical 7-segment displays exist. I used one of these as a test, but its design required manually pressing a button to change the numbers. I decided to improve this model so that it has better functionality and can be adapted to implement one motor, allowing the clock to work.</p>
 				
@@ -116,97 +224,8 @@
 						don't go back to the same thing. It will also display the room temperature and the temperature of your 
 						city on a screen.</p>
 					
-					<h2>Who has done what beforehand?</h2>
-					<p>I haven't found anyone who has made a mechanical clock with the Pomodoro method. What I have seen recently 
-						is that people have been designing mechanical 7-segment displays. For example, a guy who calls himself JBC 
-						Creative uploaded a mechanical 7-segment display. <b><a href="https://twitter.com/jbvcreative/status/1780356814170718312?s=48" target="_blank">Rack Driven 7 Segment Display</a></b>, but in my opinion, it is too wide, and he sells his design. 
-						Later, he joined six of these to make a clock that moves with motors. After researching more to understand the 
-						functioning of the gears, I noticed that the same guy uploaded an even thinner display, but he hasn't shared 
-						that design <b><a href="https://www.youtube.com/shorts/pGf1Ritfatg" target="_blank">Mecanical 7 Segment Display</a></b>. However, by investigating more on the internet, I found a free-use 7-segment display by the author 			
-						Flower-3D, although his design is manual, meaning if you want to change the number, you have to press a button 
-						yourself. <b><a href="https://www.printables.com/en/model/860058-7-segment-mechanical-counter-version-21-ratchet-wi" target="_blank">7 Segment Mechanical Counter</a></b></p>
-					<p>There are some problems with the design of Flower-3D, for example, the segments do not completely hide or at certain points, the numbers are not fully visible because the gears did not move correctly.</p>
-						<div class="align-center">
-							<img src="../assets/images/Week16/A01.jpg" alt="" width="80%"/>
-						</div>
-						<br>
-					<h2>What will I design?</h2>	
-					<p>I noticed that the free-use 7-segment display by Floer-3D has aspects that can be improved. Since the idea is not to manually press each time you want to change a number but to have motors do it, I am working on modifications 
-						to the design to be able to place a motor, thus using only six motors in total. It would be incredible to make the six displays and, through a larger gear, combine them into one, so only one motor would be needed, though that 
-						might be very ambitious.</p>
-					<p>Additionally, I need to design where all the circuits will be mounted and the casing to place the screen. Everything else will be a matter of programming.</p>
-	
-					<h2>What materials and components will be used?</h2>
-					<ul>
-						<li>3D printing (PLA)</li>
-						<li>6 stepper motors / servomotors</li>
-						<li>Xiao ESP32C3</li>
-						<li>OLED screen</li>
-						<li>MDF (casing to house everything)</li>
-					</ul>
-					<h2>Where will they come from?</h2>
-					<p>Materials such as the Xiao ESP32C3, PLA, and MDF have been provided by the FabLab Puebla. The OLED screen and motors/servomotors will be sourced from the center of Puebla, or alternatively, I will find out if the FabLab Puebla has them.</p>
-	
-					<h2>How much will they cost?</h2>
-	
-					<body>
-						<h2>Materials List</h2>
-						<table>
-							<thead>
-								<tr>
-									<th>Material</th>
-									<th>Quantity Used</th>
-									<th>Supplier</th>
-									<th>Unit Cost (USD)</th>
-									<th>Total (USD)</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>NEMA 17 Stepper Motor</td>
-									<td>4</td>
-									<td><a href="https://www.steren.com.mx/motor-a-pasos-nema-17.html" target="_blank">Steren </a></td>
-									<td>$13.39</td>
-									<td>$53.56</td>
-								</tr>
-								<tr>
-									<td>A4988 Stepper Motor Driver Module</td>
-									<td>4</td>
-									<td><a href="https://articulo.mercadolibre.com.mx/MLM-777272833-driver-de-motor-a-pasos-a4988-arduino-nema-17-stepper-motor-_JM?matt_tool=28238160&utm_source=google_shopping&utm_medium=organic" target="_blank">Mercado Libre </a></td>
-									<td>$3.23</td>
-									<td>$12.92</td>
-								</tr>
-								<tr>
-									<td>XIAO ESP32C3</td>
-									<td>1</td>
-									<td><a href="https://www.amazon.com.mx/Seeed-Studio-XIAO-ESP32C3-Microcontrolador/dp/B0B94JZ2YF" target="_blank">Amazon </a></td>
-									<td>$19.99</td>
-									<td>$19.99</td>
-								</tr>
-								<tr>
-									<td>RTC DS3231</td>
-									<td>1</td>
-									<td><a href="https://articulo.mercadolibre.com.mx/MLM-641624160-modulo-reloj-de-tiempo-real-rtc-ds3231-_JM?matt_tool=74125127&matt_word=&matt_source=google&matt_campaign_id=19641074588&matt_ad_group_id=160319647191&matt_match_type=&matt_network=g&matt_device=c&matt_creative=686683728628&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=164788322&matt_product_id=MLM641624160&matt_product_partition_id=2291870219994&matt_target_id=aud-2010778457741:pla-2291870219994&cq_src=google_ads&cq_cmp=19641074588&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-fRgwT6lHKAWmud23-hlRFFo_G5pipYg_Y0py9AXue7a8fJOOiR7gBoCxvIQAvD_BwE" target="_blank">Mercado Libre</a></td>
-									<td>$4.64</td>
-									<td>$4.64</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td><b>Total</b></td>
-									<td>$91.11</td>
-								</tr>
-							</tbody>
-						</table>
-					</body>
-	
-					<h2>What parts and systems will be made?</h2>
-					<p>As mentioned, the displays to show the clock numbers will be mechanical, so the parts for the six displays will be either 3D printed or laser cut. The casing for my project will also be made.</p>
-	
-					<h2>What processes will be used?</h2>
-					<p>For now, the plan is to use 3D printing, laser cutting or possibly router cutting, PCB manufacturing, and programming.</p>
-	
+					
+					
 					<h2>What questions need to be answered?</h2>
 					<ul>
 						<li>How to make a better mechanism performance for the 7-segment display?</li>
@@ -239,13 +258,6 @@
 				</div>
 				
 			
-				<h2>What tasks remain?</h2>
-				<ul>
-					<li>Weather via API</li>
-					<li>Case redesign</li>
-					<li>Make PCB</li>
-				</ul>
-			
 				<h2>What has worked? What hasn't?</h2>
 				<p>So far, the function of mechanically changing the numbers for the clock part has been a bit difficult, but it is still in progress and I need to program it to change the numbers.</p>
 				<p>On the other hand, I made a case to place everything, but it didn't fit perfectly, so I need to redesign it.</p>
@@ -261,73 +273,56 @@
 					<li>How can I include the weather API?</li>
 				</ul>
 			
-				<h2>What will happen when?</h2>
-				<p>For now, I will follow the schedule, and the remaining parts will be taken as tests and adjustments, as well as system programming.</p>
-				<div class="align-center">
-					<img src="../assets/images/FinalProject/TempoSphere gantt chart.png" alt="" width="60%"/>
-				</div>
-				<br>
-				<h2>What have you learned?</h2>
-				<p>So far, I have learned many ways to control the NEMA 17 stepper motors. At first, I was testing with H-Bridge Modules, but they were too large and consumed a lot of current, losing power when placing 2, so they no longer had enough torque to turn the motor. I also discovered that there is a module that allows me to keep the time and display the temperature, RTC DS3231.</p>
-				</div>
-				<!--<h3>Some of the problems of the current breastplate:</h3>
-				<h3>Advantages</h3>
-				<p>Judges are impartial and there are fewer errors in the counting of points.</p>
-				<p>Record the power of a stroke.</p>
-				 <h2>2D and 3D Modeling</h2>
-				<p>Add here your modeling and design.</p>
-
-				<h2>Some other section</h2>
-				<p>This is an updated text.</p>
-
-				<hr> -->
-				<!-- <h2>Materials</h2>
-				<div class="table-wrapper">
-					<table class="alt">
-						<thead>
-							<tr>
-								<th>Qty</th>
-								<th>Description</th>
-								<th>Price</th>
-								<th>Link</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>10</td>
-								<td>Material one </td>
-								<td>22.00 $</td>
-								<td>https://amazon.com/testoe</td>
-							</tr>
-							<tr>
-								<td>20</td>
-								<td>Material two </td>
-								<td>22.00 $</td>
-								<td>https://amazon.com/testoe</td>
-							</tr>
-							<tr>
-								<td>10</td>
-								<td>Material three </td>
-								<td>22.00 $</td>
-								<td>https://amazon.com/testoe</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Material four </td>
-								<td>22.00 $</td>
-								<td>https://amazon.com/testoe</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				<hr> -->
-				<!-- <h2>Files</h2>
+				
+				<h2>7-Segment Display Clock Instructions</h1>
+				<p>To create the clock, you will need to download the <a href="assets/files/FinalProject/Display de 7 segmentos.zip" download>7_Segment_Display.zip</a> file for the 7-segment display, unzip it, and 3D print the following parts (with quantities in parentheses):</p>
+				
+				<h3>3D Printed Components:</h2>
 				<ul>
-					<li><a href="../assets/files/Blink.ino" download>Blink code</a></li>
-					<li><a href="../assets/files/Drawing1.dwg" download>Drawing CAD</a></li>
-					<li><a href="../assets/files/plywood.jpg" download>Plywood cover</a></li>
-				</ul> -->
+					<li>(2) - BODY_2-DIGIT_v2.1_standardDepth</li>
+					<li>(4) - SEG_PLATE</li>
+					<li>(4) - MID_PLATE</li>
+					<li>(16) - SCREW_v2.1</li>
+					<li>(8) - SEG A</li>
+					<li>(8) - SEG B</li>
+					<li>(8) - SEG C</li>
+					<li>(4) - SEG D</li>
+					<li>(8) - FOLLOWER A</li>
+					<li>(8) - FOLLOWER B</li>
+					<li>(8) - FOLLOWER C</li>
+					<li>(4) - CAM A1</li>
+					<li>(4) - CAM A2</li>
+					<li>(4) - CAM B1</li>
+					<li>(4) - CAM B2</li>
+					<li>(4) - CAM C1</li>
+					<li>(4) - CAM C2</li>
+					<li>(4) - CAM D1</li>
+					<li>(4) - CAM D2</li>
+					<li>(8) - STACK_GEAR</li>
+					<li>(8) - SYNC_GEAR</li>
+					<li>(4) - Coupling for direct motor connection</li>
+				</ul>
+
+				<h3>Material and Print Settings:</h2>
+				<ul>
+					<li>Material: PLA</li>
+					<li>Infill: 100%</li>
+					<li>Layer Height: 0.2mm</li>
+					<li>Supports: No</li>
+					<li>Based on a 0.4mm nozzle</li>
+				</ul>
+
+				<h3>Non-3D Printed Components:</h2>
+				<ul>
+					<li>(8) - Type #19 rubber band (2mm x 90mm)</li>
+					<li>(16) - Type #31 rubber band (3mm x 60mm)</li>
+				</ul>
+				
+				<h2>Files</h2>
+				<ul>
+					<li><a href="assets/files/FinalProject/Display de 7 segmentos.zip" download>7_Segment_Display.zip</a></li>
+					<li><a href="assets/files/FinalProject/Reajuste_HORA/Reajuste_HORA.ino" download>Reajuste_HORA.ino</a></li>
+				</ul> 
 			</div>
 		</div>
 
@@ -336,22 +331,6 @@
 			<div class="inner">
 				<section>
 					<h2>Get in touch</h2>
-					<!-- <form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<input type="text" name="name" id="name" placeholder="Name" />
-							</div>
-							<div class="field half">
-								<input type="email" name="email" id="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send" class="primary" /></li>
-						</ul>
-					</form> -->
 				</section>
 				<section>
 					<h2>Follow</h2>
