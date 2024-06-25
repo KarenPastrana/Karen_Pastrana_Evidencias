@@ -236,18 +236,6 @@
 						<li>Display the city's temperature</li>
 					</ol>
 
-					<h2>What tasks have been completed?</h2>
-				<ul>
-					<li>Design of the mechanical 7-segment display, inspired by a model made by: <b><a href="https://www.printables.com/en/model/860058-7-segment-mechanical-counter-version-21-ratchet-wi" target="_blank">7 Segment Mechanical Counter</a></b></li>
-					<li>Motor programming</li>
-					<li>Integration of motors with the display</li>
-					<li>Pomodoro Timer</li>
-					<li>Local weather programming</li>
-				</ul>
-				<div class="align-center">
-					<img src="assets/images/FinalProject/A1.jpeg" alt="" width="60%"/>
-				</div>
-				
 			
 				<h2>What has worked? What hasn't?</h2>
 				<p>So far, the function of mechanically changing the numbers for the clock part has been a bit difficult, but it is still in progress and I need to program it to change the numbers.</p>
@@ -338,6 +326,7 @@
 						Your browser does not support the video tag.
 					</video>
 				</div>
+				<br>
 				<p>Below is the way they are connected:</p>
 				<div class="align-center">
 					<img src="assets/images/FinalProject/PCB.jpeg" alt="" width="60%"/>
@@ -355,12 +344,22 @@
 					Alternatively, if you want to redesign the PCB and need assistance with KiCad, you can check out my <b><a href="assignments/week08.html" target="_blank">Week 8</a></b>.</p>
 				
 				<hr>
+				
+				<h2>Programming</h2>
+				<p>For the programming part, since we are using the RTC DS3231 module, the first thing we need to do is insert a 3V 
+					battery into the module. After connecting everything, we upload the <a href="assets/files/FinalProject/Reajuste_HORA/Reajuste_HORA.ino" download>Reajuste_HORA.ino</a> program. This step is crucial 
+					to set the current time in the module's memory. With this setup, even if the PCB is disconnected from the computer 
+					or its power source, the module won't forget the time as it has its own battery. The code was modified from 
+					<a href="https://www.youtube.com/watch?v=KdWd5Sn7nDg" target="_blank">ChepeCarlos</a>.</p>
+				<p>Afterwards, if you want to test that all your motors and the screen are working 100%, you can upload the following code: 
+					<a href="assets/files/FinalProject/Pnatalla_RTC_Motores_Pruebas/Pnatalla_RTC_Motores_Pruebas.ino" download>Pantalla_RTC_Motores_Pruebas.ino</a>.</p>
 
 				<h2>Files</h2>
 				<ul>
 					<li><a href="assets/files/FinalProject/Display de 7 segmentos.zip" download>7_Segment_Display.zip</a></li>
 					<li><a href="assets/files/FinalProject/PCB.svg" download>PCB.svg</a></li>
 					<li><a href="assets/files/FinalProject/Reajuste_HORA/Reajuste_HORA.ino" download>Reajuste_HORA.ino</a></li>
+					<li><a href="assets/files/FinalProject/Pnatalla_RTC_Motores_Pruebas/Pnatalla_RTC_Motores_Pruebas.ino" download>Pantalla_RTC_Motores_Pruebas.ino</a></li>
 					
 				</ul> 
 			</div>
