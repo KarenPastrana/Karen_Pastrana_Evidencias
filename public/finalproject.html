@@ -308,13 +308,39 @@
 					<li>(8) - Type #19 rubber band (2mm x 90mm)</li>
 					<li>(16) - Type #31 rubber band (3mm x 60mm)</li>
 				</ul>
+				<p>To assemble each mechanical 7-segment display, you can follow the <a href="https://www.youtube.com/watch?v=q5hJP_6xUcU" target="_blank">Flower-3D tutorial</a>. 
+					Keep in mind that you only have the parts I provided for download <a href="assets/files/FinalProject/Display de 7 segmentos.zip" download>7_Segment_Display.zip</a>, and they are not the same 
+					quantity as explained in the video. You will finish assembling when you reach minute 9:32 of 
+					the video by placing the screws in the corresponding holes. Another important point is the way 
+					the bands are placed for the segments. In my design, you use 3 bands to reduce resistance. It 
+					should look like this: </p>
+					<div class="align-center">
+						<img src="assets/images/Week16/B02.jpeg" alt="" width="60%"/>
+					</div>
+					<div class="align-center">
+						<img src="assets/images/FinalProject/A3.jpeg" alt="" width="60%"/>
+					</div>
+				<p><b>Important note:</b> I recommend using some type of lubricant for the gears and the segment flowers, 
+					as reducing the resistance on the gears will make it easier for the motor to move the necessary 
+					steps to advance to the next number. Each number corresponds to a 20° rotation.</p>
+				<p>If you need some help with 3D printing, you can refer to my <b><a href="assignments/week05.html" target="_blank">Week 5</a></b>, which covers 3D Scanning and Printing.</p>
 				
 				<hr>
 
 				<h2>PCB</h2>
-				<p>For the <a href="assets/files/FinalProject/PCB.svg" download>PCB</a> design, I arranged it to accommodate the Xiao ESP32C3, four A4988 stepper motor driver modules, PCF8574 I2C GPIO Expander Module, OLED screen, RTC DS3231 module, and a button. Below is the way they are connected:</p>
+				<p>For the <a href="assets/files/FinalProject/PCB.svg" download>PCB</a> design, I arranged it to 
+					accommodate the Xiao ESP32C3, four A4988 stepper motor driver modules, PCF8574 I2C GPIO Expander 
+					Module, OLED screen, RTC DS3231 module, and a button. I used KiCad to design my PCB and the ROLAND SRM-20 
+					machine to create the PCB on a 10 cm x 15 cm phenolic board.</p>
+				<div class="video-wrapper">
+					<video width="560" height="315" controls>
+						<source src="assets/videos/Final Proyect/A02.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<p>Below is the way they are connected:</p>
 				<div class="align-center">
-					<img src="assets/images/FinalProject/PCB.png" alt="" width="60%"/>
+					<img src="assets/images/FinalProject/PCB.jpeg" alt="" width="60%"/>
 				</div>
 				<div class="align-center">
 					<img src="assets/images/FinalProject/PCB soldada.jpeg" alt="" width="60%"/>
@@ -325,6 +351,8 @@
 						Your browser does not support the video tag.
 					</video>
 				</div>
+				<p>If you need more help on how to use the ROLAND SRM-20 to make the PCB, you can refer to my <b><a href="assignments/week04.html" target="_blank">Week 4</a></b>. 
+					Alternatively, if you want to redesign the PCB and need assistance with KiCad, you can check out my <b><a href="assignments/week08.html" target="_blank">Week 8</a></b>.</p>
 				
 				<hr>
 
