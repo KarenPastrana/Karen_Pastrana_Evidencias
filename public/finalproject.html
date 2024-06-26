@@ -71,7 +71,32 @@
 					</div>
 				<br>
 				<h2>What does it do?</h2>
-				<p>By using mechanical displays, it can change the numbers to show the Pomodoro method, as well as display the time on an OLED screen and show the weather.</p>
+				<p><b>Clock with a Pomodoro timer and weather</b></p>
+				<p>The idea of this project is to have a clock with different functionalities so that you can 
+					better organize yourself with the Pomodoro Technique. The concept is that with a button, 
+					you can switch between clock function and the technique. It would also feature a screen displaying the weather.</p>
+				<p>Previously, the idea was to use one motor for each numeric segment, totaling 42 motors for the clock, but this was clearly not practical. After some research, I found that mechanical 7-segment displays exist. I used one of these as a test, but its design required manually pressing a button to change the numbers. I decided to improve this model so that it has better functionality and can be adapted to implement one motor, allowing the clock to work.</p>
+				
+				<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 1.6em; margin-bottom: 0.9em;">
+					<div style="position: relative; width: 60%; height: 0; padding-top: 85%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); overflow: hidden; border-radius: 8px; will-change: transform;">
+					  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAGBja_vpls/vayGtub8rcgWUlQlHyapxQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+					</div>
+				</div>
+				<h2>Sketch</h2>
+				<div class="align-center">
+					<img src="assets/images/FinalProject/Sketch.png" alt="" width="80%"/>
+				</div>
+				<br>
+
+				<h2>Schedule</h2>
+				<div class="align-center">
+					<img src="assets/images/FinalProject/TempoSphere gantt chart.png" alt="" width="50%"/>
+					</div>
+				<br>
+				<h2>Research</h2>
+				
+				<p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It involves breaking work into intervals, traditionally 25 minutes in length, separated by short breaks. The technique aims to improve productivity by promoting focus and reducing the impact of distractions. Named after the Italian word for 'tomato' (pomodoro) due to the use of a tomato-shaped kitchen timer by Cirillo during his university years, the Pomodoro Technique has gained popularity as a simple yet effective approach to managing time and tasks.</p> 
+				<br>
 
 				<h2>Who’s done what beforehand?</h2>
 				<p>I haven't found anyone who has made a mechanical clock with the Pomodoro method. What I have seen recently 
@@ -171,96 +196,53 @@
 					<li>PCB manufacturing.</li>
 					<li>Programming the microcontroller to control the displays and handle timekeeping, Pomodoro timing, and weather display.</li>
 				</ul>
-
+				
 				<h2>What questions were answered?</h2>
+				<ul>
+					<li>How to make a better mechanism performance for the 7-segment display?</li>
+					<li>How convenient is it to 3D print the parts? Is laser cutting more convenient?</li>
+					<li>What speed can the mechanism withstand?</li>
+					<li>How difficult will it be to establish communication with an API to get the location, local time, and weather?</li>
+				</ul>
 
 				<h2>What worked? What didn’t?</h2>
+				<p>The parts that didn't work are as follows: at the beginning, I designed a PCB without conducting tests, but I never used it because the CNC ruined some of the tracks. Additionally, when testing the programming, I changed the pins and the way some things were connected because, with the Xiao ESP32, when trying to connect the motors to pins D6 and D7, they simply didn't work, so I opted to use a pin expander that communicates via I2C.</p>
+				<div class="align-center">
+					<img src="assets/images/FinalProject/A2.jpeg" alt="" width="40%"/>
+				</div>
+				<p>Another part that didn't work was that at the beginning of the project, I had the idea of moving each segment of each number with a servo motor, but in the end, it would require 28 servo motors and 28 pins just to program them. Therefore, I chose the design of a mechanical display that moves the 7 segments with just 1 motor.</p>
+				<div class="align-center">
+					<img src="assets/images/FinalProject/A07.jfif" alt="" width="15%"/>
+				</div>
+				<br>
 
 				<h2>How was it evaluated?</h2>
+				<ol>
+					<li>Function as a clock</li>
+					<li>Function as a Pomodoro timer</li>
+					<li>Switch between clock and Pomodoro timer modes</li>
+					<li>Display seems the wheather</li>
+				</ol>
 
-				<h2>What are the implications?</h2>
-
-
-
-
-				<h2>Clock with a Pomodoro timer and weather</h2>
-				<p>The idea of this project is to have a clock with different functionalities so that you can better organize yourself with the Pomodoro Technique. The concept is that with a button, you can switch between clock function and the technique, and possibly also connect an interface that allows you to do so from a device. It would also feature a screen displaying the room's climate and, through an API, be able to view the weather of the city you are in.</p>
-				<p>Previously, the idea was to use one motor for each numeric segment, totaling 42 motors for the clock, but this was clearly not practical. After some research, I found that mechanical 7-segment displays exist. I used one of these as a test, but its design required manually pressing a button to change the numbers. I decided to improve this model so that it has better functionality and can be adapted to implement one motor, allowing the clock to work.</p>
-				
-				<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 1.6em; margin-bottom: 0.9em;">
-					<div style="position: relative; width: 60%; height: 0; padding-top: 85%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); overflow: hidden; border-radius: 8px; will-change: transform;">
-					  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAGBja_vpls/vayGtub8rcgWUlQlHyapxQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
-					</div>
-				</div>
-				  
-				<br>
-				<h2>Sketch</h2>
-				<div class="align-center">
-					<img src="assets/images/FinalProject/Sketch.png" alt="" width="100%"/>
-				</div>
-				<br>
-
-				<h2>Schedule</h2>
-				<div class="align-center">
-					<img src="assets/images/FinalProject/TempoSphere gantt chart.png" alt="" width="60%"/>
-					</div>
-				<br>
-				<h2>Research</h2>
-				
-				<p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It involves breaking work into intervals, traditionally 25 minutes in length, separated by short breaks. The technique aims to improve productivity by promoting focus and reducing the impact of distractions. Named after the Italian word for 'tomato' (pomodoro) due to the use of a tomato-shaped kitchen timer by Cirillo during his university years, the Pomodoro Technique has gained popularity as a simple yet effective approach to managing time and tasks.</p> 
-				<p>One of the ideas that I'm liking a lot is being able to design something like what can be seen in the following link:</p>
-				<b><a href="https://twitter.com/jbvcreative/status/1780356814170718312?s=48" target="_blank">Rack Driven 7 Segment Display</a></b>
 				<br>
 				<br>
-				<h2>Progress</h2>
-				<p>For these initial tests, I am displaying the values obtained by the RTC DS3231 module (temperature and stored time) on an OLED screen. All of this is connected via I2C communication to the XIAO ESP32C3 microcontroller. To make the RTC module work, it needs a 3V clock battery so that it retains the time even when it is not receiving enough power to stay on, and it does not need to be reconfigured each time it is turned on. </p>
-				<p>In the video, you can see how the data for the advancing seconds is stored.</p>
-				<div class="box alt">
-					<div class="video-wrapper">
-						<video width="560" height="315" controls>
-							<source src="assets/videos/Final Proyect/Prueba1.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-
-					
-					<h2>What questions need to be answered?</h2>
-					<ul>
-						<li>How to make a better mechanism performance for the 7-segment display?</li>
-						<li>Can a mechanism for the 6 segments be assembled?</li>
-						<li>How convenient is it to 3D print the parts? Is laser cutting more convenient?</li>
-						<li>If cut in MDF, will it wear out?</li>
-						<li>What speed can the mechanism withstand?</li>
-						<li>How difficult will it be to establish communication with an API to get the location, local time, and weather?</li>
-					</ul>
-	
-					<h2>How will it be evaluated?</h2>
-					<ol>
-						<li>Function as a clock</li>
-						<li>Function as a Pomodoro timer</li>
-						<li>Switch between clock and Pomodoro timer modes</li>
-						<li>Display the room temperature</li>
-						<li>Display the city's temperature</li>
-					</ol>
-
-			
-				<h2>What has worked? What hasn't?</h2>
-				<p>So far, the function of mechanically changing the numbers for the clock part has been a bit difficult, but it is still in progress and I need to program it to change the numbers.</p>
-				<p>On the other hand, I made a case to place everything, but it didn't fit perfectly, so I need to redesign it.</p>
-				<p>I also had cut the PCB, but due to a small unevenness, some tracks were eaten up, so I need to redo it.</p>
-				<div class="align-center">
-					<img src="assets/images/FinalProject/A2.jpeg" alt="" width="60%"/>
-				</div>
-
-				<h2>What questions need to be resolved?</h2>
+				<h2>License Choice</h2>
+				<h3>Open Source License</h3>
 				<ul>
-					<li>How can I make a coupler that adjusts better and has more force to turn the motor?</li>
-					<li>How to obtain variables to indicate the number of steps the mechanical number should advance?</li>
-					<li>How can I include the weather API?</li>
+					<li>Motivations: Select an open license to contribute to collective knowledge, facilitate learning, and encourage innovation within the maker community.</li>
 				</ul>
-			
+				<p>This work is licensed under a </p>
+				<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons (4.0 International License)<br><h6>Attribution-ShareAlike</h6></a>
 				<hr>
-				<h2>7-Segment Display Clock Instructions</h1>
+				<p><span style="color:#cb2c2c; font-weight:bold;">✖ </span> | Sharing without ATTRIBUTION  </p>
+				<p><span style="color:#5daf0b; font-weight:bold;">✔ </span>  | Remix Culture allowed  </p>
+				<p><span style="color:#5daf0b; font-weight:bold;">✔ </span>  | Commercial Use  </p>
+				<p><span style="color:#5daf0b; font-weight:bold;">✔ </span>  | Free Cultural Works  </p>
+				<img src="../assets/images/FinalProject/licence.png" alt="" width="10%"/>
+				<br>
+				<br>
+				<hr>
+				<h1>7-Segment Display Clock Instructions</h1>
 				<p>To create the clock, you will need to download the <a href="assets/files/FinalProject/Display de 7 segmentos.zip" download>7_Segment_Display.zip</a> file for the 7-segment display, unzip it, and 3D print the following parts (with quantities in parentheses):</p>
 				
 				<h3>3D Printed Components:</h2>
@@ -348,6 +330,7 @@
 						Your browser does not support the video tag.
 					</video>
 				</div>
+				<br>
 				<p>If you need more help on how to use the ROLAND SRM-20 to make the PCB, you can refer to my <b><a href="assignments/week04.html" target="_blank">Week 4</a></b>. 
 					Alternatively, if you want to redesign the PCB and need assistance with KiCad, you can check out my <b><a href="assignments/week08.html" target="_blank">Week 8</a></b>.</p>
 				
@@ -389,8 +372,9 @@
 						Your browser does not support the video tag.
 					</video>
 				</div>
-
-
+				<br>
+				<p>If you need more help with laser cutting, you can go to my <b><a href="assignments/week03.html" target="_blank">Week 3</a></b> for support.</p>
+				
 				<hr>
 				<h2>Files</h2>
 				<ul>
