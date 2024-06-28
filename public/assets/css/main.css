@@ -3432,7 +3432,7 @@ input, select, textarea {
 			height: 450px; /* Ajusta la altura para que el rectángulo sea más largo que ancho */
 			margin: 10px;
 			border-radius: 15px; /* Esquinas redondeadas */
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px 2px rgba(78, 232, 78, 0.7); /* Sombra y efecto de luz neón verde */
+			
 			transition: transform 0.3s, box-shadow 0.3s;
 			position: relative; /* Asegura que el contenido y la imagen se ubiquen correctamente */
 			overflow: hidden; /* Para que las esquinas redondeadas se apliquen a los hijos */
@@ -3440,7 +3440,7 @@ input, select, textarea {
 		
 		.custom-tiles .custom-style1:hover {
 			transform: scale(1.05);
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 15px 4px rgba(90, 237, 90, 0.9); /* Aumenta el efecto de sombra en hover */
+			
 		}
 		
 		.custom-tiles .custom-style1 a {
