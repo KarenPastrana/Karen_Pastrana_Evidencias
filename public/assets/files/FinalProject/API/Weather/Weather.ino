@@ -3,8 +3,8 @@
 #include <ArduinoJson.h>
 
 // Reemplaza estos valores con los tuyos
-const char* ssid = "Jp Phone";
-const char* password = "yayoyayo";
+const char* ssid = "iPhone de Rafael";
+const char* password = "nomelase";
 String api_key = "20a679978be8158d6c3d4ee004dd4c61";
 String city = "Puebla";
 String country = "MX";
